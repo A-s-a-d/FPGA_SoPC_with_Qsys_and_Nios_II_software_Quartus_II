@@ -2,7 +2,7 @@ set_global_assignment -entity "de1_blinker" -library "de1_blinker" -name IP_TOOL
 set_global_assignment -entity "de1_blinker" -library "de1_blinker" -name IP_TOOL_VERSION "15.0"
 set_global_assignment -entity "de1_blinker" -library "de1_blinker" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "de1_blinker" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../de1_blinker.sopcinfo"]
-set_global_assignment -entity "de1_blinker" -library "de1_blinker" -name SLD_INFO "QSYS_NAME de1_blinker HAS_SOPCINFO 1 GENERATION_ID 1734605748"
+set_global_assignment -entity "de1_blinker" -library "de1_blinker" -name SLD_INFO "QSYS_NAME de1_blinker HAS_SOPCINFO 1 GENERATION_ID 1737921861"
 set_global_assignment -library "de1_blinker" -name MISC_FILE [file join $::quartus(qip_path) "../de1_blinker.cmp"]
 set_global_assignment -library "de1_blinker" -name SLD_FILE [file join $::quartus(qip_path) "de1_blinker.regmap"]
 set_global_assignment -library "de1_blinker" -name SLD_FILE [file join $::quartus(qip_path) "de1_blinker.debuginfo"]
@@ -16,7 +16,7 @@ set_global_assignment -entity "de1_blinker" -library "de1_blinker" -name IP_COMP
 set_global_assignment -entity "de1_blinker" -library "de1_blinker" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "de1_blinker" -library "de1_blinker" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "de1_blinker" -library "de1_blinker" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "de1_blinker" -library "de1_blinker" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTczNDYwNTc0OA==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "de1_blinker" -library "de1_blinker" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTczNzkyMTg2MQ==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "de1_blinker" -library "de1_blinker" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "de1_blinker" -library "de1_blinker" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRUJBNlUyM0k3::QXV0byBERVZJQ0U="
 set_global_assignment -entity "de1_blinker" -library "de1_blinker" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Nw==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
