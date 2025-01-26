@@ -1,0 +1,9 @@
+09:41:02 **** Incremental Build of configuration Nios II for project Count_Binary ****
+make all 
+Info: Building ../Count_Binary_bsp/
+C:/Programs_2/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Count_Binary_bsp/
+[BSP build complete]
+[Count_Binary build complete]
+
+09:41:03 Build Finished (took 863ms)
+

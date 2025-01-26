@@ -1,0 +1,9 @@
+11:02:53 **** Incremental Build of configuration Nios II for project app-to-board ****
+make all 
+Info: Building ../blinker-lib_bsp/
+C:/Programs_2/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../blinker-lib_bsp/
+[BSP build complete]
+[app-to-board build complete]
+
+11:02:53 Build Finished (took 731ms)
+
