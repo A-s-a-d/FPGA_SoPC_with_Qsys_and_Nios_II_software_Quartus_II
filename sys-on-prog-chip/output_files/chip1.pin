@@ -115,13 +115,13 @@ GND                          : AA9       : gnd    :                   :         
 VCCPD3A                      : AA10      : power  :                   : 2.5V    : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA11      :        :                   :         : 3A        :                
 VCCIO3B                      : AA12      : power  :                   : 2.5V    : 3B        :                
-seven_seg_3_external_connection_export[7] : AA13      : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA13      :        :                   :         : 4A        :                
 VCCPD3B4A                    : AA14      : power  :                   : 2.5V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA15      :        :                   :         : 4A        :                
+centaines_external_connection_export[2] : AA15      : input  : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : AA16      : power  :                   : 2.5V    : 4A        :                
 GND                          : AA17      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA18      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA19      :        :                   :         : 4A        :                
+centaines_external_connection_export[1] : AA18      : input  : 2.5 V             :         : 4A        : N              
+unites_external_connection_export[1] : AA19      : input  : 2.5 V             :         : 4A        : N              
 seven_seg_2_external_connection_export[2] : AA20      : output : 2.5 V             :         : 5A        : Y              
 VCCA_FPLL                    : AA21      : power  :                   : 2.5V    :           :                
 led_external_connection_export[7] : AA23      : output : 2.5 V             :         : 5A        : Y              
@@ -136,7 +136,7 @@ GND                          : AB3       : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB4       :        :                   :         : 3A        :                
 altera_reserved_tck          : AB5       : input  : 2.5 V             :         : 3A        : N              
 AS_DATA3, DATA3              : AB6       :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB23      :        :                   :         : 5A        :                
+dizaines_external_connection_export[0] : AB23      : input  : 2.5 V             :         : 5A        : N              
 GND                          : AB24      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB25      :        :                   :         : 5B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB26      :        :                   :         : 5B        :                
@@ -174,10 +174,10 @@ VCCPD3B4A                    : AD13      : power  :                   : 2.5V    
 GND                          : AD14      : gnd    :                   :         :           :                
 VCC_AUX                      : AD15      : power  :                   : 2.5V    :           :                
 VCCPD3B4A                    : AD16      : power  :                   : 2.5V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD17      :        :                   :         : 4A        :                
+seven_seg_1_external_connection_export[7] : AD17      : output : 2.5 V             :         : 4A        : N              
 VCCPD3B4A                    : AD18      : power  :                   : 2.5V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD19      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD20      :        :                   :         : 4A        :                
+centaines_external_connection_export[0] : AD19      : input  : 2.5 V             :         : 4A        : N              
+seven_seg_3_external_connection_export[7] : AD20      : output : 2.5 V             :         : 4A        : N              
 VCCPD3B4A                    : AD21      : power  :                   : 2.5V    :           :                
 GND                          : AD22      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD23      :        :                   :         : 4A        :                
@@ -255,7 +255,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AG10      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG11      :        :                   :         : 4A        :                
 VCCIO4A                      : AG12      : power  :                   : 2.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG13      :        :                   :         : 4A        :                
-seven_seg_2_external_connection_export[7] : AG14      : output : 2.5 V             :         : 4A        : N              
+unites_external_connection_export[0] : AG14      : input  : 2.5 V             :         : 4A        : N              
 seven_seg_3_external_connection_export[1] : AG15      : output : 2.5 V             :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG16      :        :                   :         : 4A        :                
 GND                          : AG17      : gnd    :                   :         :           :                
@@ -279,13 +279,13 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AH7       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH8       :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH9       :        :                   :         : 4A        :                
 GND                          : AH10      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH11      :        :                   :         : 4A        :                
-seven_seg_1_external_connection_export[7] : AH12      : output : 2.5 V             :         : 4A        : N              
-seven_seg_4_external_connection_export[7] : AH13      : output : 2.5 V             :         : 4A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH14      :        :                   :         : 4A        :                
+unites_external_connection_export[2] : AH11      : input  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH12      :        :                   :         : 4A        :                
+dizaines_external_connection_export[3] : AH13      : input  : 2.5 V             :         : 4A        : N              
+unites_external_connection_export[3] : AH14      : input  : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : AH15      : power  :                   : 2.5V    : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH16      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH17      :        :                   :         : 4A        :                
+dizaines_external_connection_export[1] : AH16      : input  : 2.5 V             :         : 4A        : N              
+seven_seg_4_external_connection_export[7] : AH17      : output : 2.5 V             :         : 4A        : N              
 seven_seg_3_external_connection_export[6] : AH18      : output : 2.5 V             :         : 4A        : Y              
 seven_seg_3_external_connection_export[4] : AH19      : output : 2.5 V             :         : 4A        : Y              
 GND                          : AH20      : gnd    :                   :         :           :                
@@ -688,7 +688,7 @@ GND                          : V9        : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : V10       :        :                   :         : 3A        :                
 clk_clk                      : V11       : input  : 2.5 V             :         : 3B        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V12       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V13       :        :                   :         : 4A        :                
+centaines_external_connection_export[3] : V13       : input  : 2.5 V             :         : 4A        : N              
 GND                          : V14       : gnd    :                   :         :           :                
 led_external_connection_export[3] : V15       : output : 2.5 V             :         : 5A        : Y              
 led_external_connection_export[2] : V16       : output : 2.5 V             :         : 5A        : Y              
@@ -713,7 +713,7 @@ altera_reserved_tdi          : W10       : input  : 2.5 V             :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : W11       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W12       :        :                   :         : 3B        :                
 VCCIO4A                      : W13       : power  :                   : 2.5V    : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W14       :        :                   :         : 4A        :                
+seven_seg_2_external_connection_export[7] : W14       : output : 2.5 V             :         : 4A        : N              
 led_external_connection_export[0] : W15       : output : 2.5 V             :         : 5A        : Y              
 GND                          : W16       : gnd    :                   :         :           :                
 VCCIO5A                      : W17       : power  :                   : 2.5V    : 5A        :                
@@ -736,7 +736,7 @@ altera_reserved_tdo          : Y9        : output : 2.5 V             :         
 VCCPGM                       : Y10       : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y11       :        :                   :         : 3A        :                
 GND                          : Y12       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y13       :        :                   :         : 4A        :                
+dizaines_external_connection_export[2] : Y13       : input  : 2.5 V             :         : 4A        : N              
 GND                          : Y14       : gnd    :                   :         :           :                
 seven_seg_1_external_connection_export[4] : Y15       : output : 2.5 V             :         : 4A        : Y              
 led_external_connection_export[6] : Y16       : output : 2.5 V             :         : 5A        : Y              

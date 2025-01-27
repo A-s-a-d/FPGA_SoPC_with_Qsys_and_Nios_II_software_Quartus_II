@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_proc' in SOPC Builder design 'de1_blinker'
  * SOPC Builder design path: ../../de1_blinker.sopcinfo
  *
- * Generated: Thu Dec 19 11:59:16 CET 2024
+ * Generated: Mon Jan 27 17:22:55 CET 2025
  */
 
 /*
@@ -119,6 +119,33 @@
 
 
 /*
+ * Centaines configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Centaines altera_avalon_pio
+#define CENTAINES_BASE 0x81010
+#define CENTAINES_BIT_CLEARING_EDGE_REGISTER 0
+#define CENTAINES_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define CENTAINES_CAPTURE 0
+#define CENTAINES_DATA_WIDTH 4
+#define CENTAINES_DO_TEST_BENCH_WIRING 0
+#define CENTAINES_DRIVEN_SIM_VALUE 0
+#define CENTAINES_EDGE_TYPE "NONE"
+#define CENTAINES_FREQ 50000000
+#define CENTAINES_HAS_IN 1
+#define CENTAINES_HAS_OUT 0
+#define CENTAINES_HAS_TRI 0
+#define CENTAINES_IRQ -1
+#define CENTAINES_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define CENTAINES_IRQ_TYPE "NONE"
+#define CENTAINES_NAME "/dev/Centaines"
+#define CENTAINES_RESET_VALUE 0
+#define CENTAINES_SPAN 16
+#define CENTAINES_TYPE "altera_avalon_pio"
+
+
+/*
  * Define for each module class mastered by the CPU
  *
  */
@@ -131,12 +158,66 @@
 
 
 /*
+ * Dizaines configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Dizaines altera_avalon_pio
+#define DIZAINES_BASE 0x81020
+#define DIZAINES_BIT_CLEARING_EDGE_REGISTER 0
+#define DIZAINES_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define DIZAINES_CAPTURE 0
+#define DIZAINES_DATA_WIDTH 4
+#define DIZAINES_DO_TEST_BENCH_WIRING 0
+#define DIZAINES_DRIVEN_SIM_VALUE 0
+#define DIZAINES_EDGE_TYPE "NONE"
+#define DIZAINES_FREQ 50000000
+#define DIZAINES_HAS_IN 1
+#define DIZAINES_HAS_OUT 0
+#define DIZAINES_HAS_TRI 0
+#define DIZAINES_IRQ -1
+#define DIZAINES_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define DIZAINES_IRQ_TYPE "NONE"
+#define DIZAINES_NAME "/dev/Dizaines"
+#define DIZAINES_RESET_VALUE 0
+#define DIZAINES_SPAN 16
+#define DIZAINES_TYPE "altera_avalon_pio"
+
+
+/*
+ * Milliers configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Milliers altera_avalon_pio
+#define MILLIERS_BASE 0x81000
+#define MILLIERS_BIT_CLEARING_EDGE_REGISTER 0
+#define MILLIERS_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MILLIERS_CAPTURE 0
+#define MILLIERS_DATA_WIDTH 4
+#define MILLIERS_DO_TEST_BENCH_WIRING 0
+#define MILLIERS_DRIVEN_SIM_VALUE 0
+#define MILLIERS_EDGE_TYPE "NONE"
+#define MILLIERS_FREQ 50000000
+#define MILLIERS_HAS_IN 1
+#define MILLIERS_HAS_OUT 0
+#define MILLIERS_HAS_TRI 0
+#define MILLIERS_IRQ -1
+#define MILLIERS_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define MILLIERS_IRQ_TYPE "NONE"
+#define MILLIERS_NAME "/dev/Milliers"
+#define MILLIERS_RESET_VALUE 0
+#define MILLIERS_SPAN 16
+#define MILLIERS_TYPE "altera_avalon_pio"
+
+
+/*
  * Seven_Seg_1 configuration
  *
  */
 
 #define ALT_MODULE_CLASS_Seven_Seg_1 altera_avalon_pio
-#define SEVEN_SEG_1_BASE 0x81030
+#define SEVEN_SEG_1_BASE 0x81070
 #define SEVEN_SEG_1_BIT_CLEARING_EDGE_REGISTER 0
 #define SEVEN_SEG_1_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SEVEN_SEG_1_CAPTURE 0
@@ -163,7 +244,7 @@
  */
 
 #define ALT_MODULE_CLASS_Seven_Seg_2 altera_avalon_pio
-#define SEVEN_SEG_2_BASE 0x81000
+#define SEVEN_SEG_2_BASE 0x81040
 #define SEVEN_SEG_2_BIT_CLEARING_EDGE_REGISTER 0
 #define SEVEN_SEG_2_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SEVEN_SEG_2_CAPTURE 0
@@ -190,7 +271,7 @@
  */
 
 #define ALT_MODULE_CLASS_Seven_Seg_3 altera_avalon_pio
-#define SEVEN_SEG_3_BASE 0x81010
+#define SEVEN_SEG_3_BASE 0x81050
 #define SEVEN_SEG_3_BIT_CLEARING_EDGE_REGISTER 0
 #define SEVEN_SEG_3_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SEVEN_SEG_3_CAPTURE 0
@@ -217,7 +298,7 @@
  */
 
 #define ALT_MODULE_CLASS_Seven_Seg_4 altera_avalon_pio
-#define SEVEN_SEG_4_BASE 0x81020
+#define SEVEN_SEG_4_BASE 0x81060
 #define SEVEN_SEG_4_BIT_CLEARING_EDGE_REGISTER 0
 #define SEVEN_SEG_4_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SEVEN_SEG_4_CAPTURE 0
@@ -254,24 +335,51 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x81068
+#define ALT_STDERR_BASE 0x810a8
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x81068
+#define ALT_STDIN_BASE 0x810a8
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x81068
+#define ALT_STDOUT_BASE 0x810a8
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
 #define ALT_STDOUT_TYPE "altera_avalon_jtag_uart"
 #define ALT_SYSTEM_NAME "de1_blinker"
+
+
+/*
+ * Unites configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Unites altera_avalon_pio
+#define UNITES_BASE 0x81030
+#define UNITES_BIT_CLEARING_EDGE_REGISTER 0
+#define UNITES_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define UNITES_CAPTURE 0
+#define UNITES_DATA_WIDTH 4
+#define UNITES_DO_TEST_BENCH_WIRING 0
+#define UNITES_DRIVEN_SIM_VALUE 0
+#define UNITES_EDGE_TYPE "NONE"
+#define UNITES_FREQ 50000000
+#define UNITES_HAS_IN 1
+#define UNITES_HAS_OUT 0
+#define UNITES_HAS_TRI 0
+#define UNITES_IRQ -1
+#define UNITES_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define UNITES_IRQ_TYPE "NONE"
+#define UNITES_NAME "/dev/Unites"
+#define UNITES_RESET_VALUE 0
+#define UNITES_SPAN 16
+#define UNITES_TYPE "altera_avalon_pio"
 
 
 /*
@@ -290,7 +398,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x81068
+#define JTAG_UART_0_BASE 0x810a8
 #define JTAG_UART_0_IRQ 0
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -308,7 +416,7 @@
  */
 
 #define ALT_MODULE_CLASS_led altera_avalon_pio
-#define LED_BASE 0x81050
+#define LED_BASE 0x81090
 #define LED_BIT_CLEARING_EDGE_REGISTER 0
 #define LED_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LED_CAPTURE 0
@@ -364,7 +472,7 @@
  */
 
 #define ALT_MODULE_CLASS_switcher altera_avalon_pio
-#define SWITCHER_BASE 0x81040
+#define SWITCHER_BASE 0x81080
 #define SWITCHER_BIT_CLEARING_EDGE_REGISTER 0
 #define SWITCHER_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SWITCHER_CAPTURE 0
@@ -391,13 +499,13 @@
  */
 
 #define ALT_MODULE_CLASS_sysid_1337 altera_avalon_sysid_qsys
-#define SYSID_1337_BASE 0x81060
+#define SYSID_1337_BASE 0x810a0
 #define SYSID_1337_ID 4919
 #define SYSID_1337_IRQ -1
 #define SYSID_1337_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_1337_NAME "/dev/sysid_1337"
 #define SYSID_1337_SPAN 8
-#define SYSID_1337_TIMESTAMP 1734605748
+#define SYSID_1337_TIMESTAMP 1737994685
 #define SYSID_1337_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

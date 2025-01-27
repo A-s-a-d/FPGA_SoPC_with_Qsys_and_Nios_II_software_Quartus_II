@@ -6,7 +6,10 @@
 			seven_seg_2_external_connection_export : out std_logic_vector(7 downto 0);                    -- export
 			seven_seg_3_external_connection_export : out std_logic_vector(7 downto 0);                    -- export
 			seven_seg_4_external_connection_export : out std_logic_vector(7 downto 0);                    -- export
-			switcher_external_connection_export    : in  std_logic_vector(3 downto 0) := (others => 'X')  -- export
+			switcher_external_connection_export    : in  std_logic_vector(3 downto 0) := (others => 'X'); -- export
+			dizaines_external_connection_export    : in  std_logic_vector(3 downto 0) := (others => 'X'); -- export
+			unites_external_connection_export      : in  std_logic_vector(3 downto 0) := (others => 'X'); -- export
+			centaines_external_connection_export   : in  std_logic_vector(3 downto 0) := (others => 'X')  -- export
 		);
 	end component de1_blinker;
 
@@ -18,6 +21,9 @@
 			seven_seg_2_external_connection_export => CONNECTED_TO_seven_seg_2_external_connection_export, -- seven_seg_2_external_connection.export
 			seven_seg_3_external_connection_export => CONNECTED_TO_seven_seg_3_external_connection_export, -- seven_seg_3_external_connection.export
 			seven_seg_4_external_connection_export => CONNECTED_TO_seven_seg_4_external_connection_export, -- seven_seg_4_external_connection.export
-			switcher_external_connection_export    => CONNECTED_TO_switcher_external_connection_export     --    switcher_external_connection.export
+			switcher_external_connection_export    => CONNECTED_TO_switcher_external_connection_export,    --    switcher_external_connection.export
+			dizaines_external_connection_export    => CONNECTED_TO_dizaines_external_connection_export,    --    dizaines_external_connection.export
+			unites_external_connection_export      => CONNECTED_TO_unites_external_connection_export,      --      unites_external_connection.export
+			centaines_external_connection_export   => CONNECTED_TO_centaines_external_connection_export    --   centaines_external_connection.export
 		);
 

@@ -4,13 +4,16 @@
 
 `timescale 1 ps / 1 ps
 module de1_blinker (
+		input  wire [3:0] centaines_external_connection_export,   //   centaines_external_connection.export
 		input  wire       clk_clk,                                //                             clk.clk
+		input  wire [3:0] dizaines_external_connection_export,    //    dizaines_external_connection.export
 		output wire [7:0] led_external_connection_export,         //         led_external_connection.export
 		output wire [7:0] seven_seg_1_external_connection_export, // seven_seg_1_external_connection.export
 		output wire [7:0] seven_seg_2_external_connection_export, // seven_seg_2_external_connection.export
 		output wire [7:0] seven_seg_3_external_connection_export, // seven_seg_3_external_connection.export
 		output wire [7:0] seven_seg_4_external_connection_export, // seven_seg_4_external_connection.export
-		input  wire [3:0] switcher_external_connection_export     //    switcher_external_connection.export
+		input  wire [3:0] switcher_external_connection_export,    //    switcher_external_connection.export
+		input  wire [3:0] unites_external_connection_export       //      unites_external_connection.export
 	);
 
 	wire         nios2_proc_jtag_debug_module_reset_reset;                    // nios2_proc:jtag_debug_module_resetrequest -> rst_controller:reset_in0
@@ -77,10 +80,42 @@ module de1_blinker (
 	wire   [1:0] mm_interconnect_0_seven_seg_2_s1_address;                    // mm_interconnect_0:Seven_Seg_2_s1_address -> Seven_Seg_2:address
 	wire         mm_interconnect_0_seven_seg_2_s1_write;                      // mm_interconnect_0:Seven_Seg_2_s1_write -> Seven_Seg_2:write_n
 	wire  [31:0] mm_interconnect_0_seven_seg_2_s1_writedata;                  // mm_interconnect_0:Seven_Seg_2_s1_writedata -> Seven_Seg_2:writedata
+	wire  [31:0] mm_interconnect_0_unites_s1_readdata;                        // Unites:readdata -> mm_interconnect_0:Unites_s1_readdata
+	wire   [1:0] mm_interconnect_0_unites_s1_address;                         // mm_interconnect_0:Unites_s1_address -> Unites:address
+	wire  [31:0] mm_interconnect_0_dizaines_s1_readdata;                      // Dizaines:readdata -> mm_interconnect_0:Dizaines_s1_readdata
+	wire   [1:0] mm_interconnect_0_dizaines_s1_address;                       // mm_interconnect_0:Dizaines_s1_address -> Dizaines:address
+	wire  [31:0] mm_interconnect_0_centaines_s1_readdata;                     // Centaines:readdata -> mm_interconnect_0:Centaines_s1_readdata
+	wire   [1:0] mm_interconnect_0_centaines_s1_address;                      // mm_interconnect_0:Centaines_s1_address -> Centaines:address
+	wire  [31:0] mm_interconnect_0_milliers_s1_readdata;                      // Milliers:readdata -> mm_interconnect_0:Milliers_s1_readdata
+	wire   [1:0] mm_interconnect_0_milliers_s1_address;                       // mm_interconnect_0:Milliers_s1_address -> Milliers:address
 	wire         irq_mapper_receiver0_irq;                                    // jtag_uart_0:av_irq -> irq_mapper:receiver0_irq
 	wire  [31:0] nios2_proc_d_irq_irq;                                        // irq_mapper:sender_irq -> nios2_proc:d_irq
-	wire         rst_controller_reset_out_reset;                              // rst_controller:reset_out -> [Seven_Seg_1:reset_n, Seven_Seg_2:reset_n, Seven_Seg_3:reset_n, Seven_Seg_4:reset_n, irq_mapper:reset, jtag_uart_0:rst_n, led:reset_n, mm_interconnect_0:nios2_proc_reset_n_reset_bridge_in_reset_reset, nios2_proc:reset_n, onchip_memory:reset, rst_translator:in_reset, switcher:reset_n, sysid_1337:reset_n]
+	wire         rst_controller_reset_out_reset;                              // rst_controller:reset_out -> [Centaines:reset_n, Dizaines:reset_n, Milliers:reset_n, Seven_Seg_1:reset_n, Seven_Seg_2:reset_n, Seven_Seg_3:reset_n, Seven_Seg_4:reset_n, Unites:reset_n, irq_mapper:reset, jtag_uart_0:rst_n, led:reset_n, mm_interconnect_0:nios2_proc_reset_n_reset_bridge_in_reset_reset, nios2_proc:reset_n, onchip_memory:reset, rst_translator:in_reset, switcher:reset_n, sysid_1337:reset_n]
 	wire         rst_controller_reset_out_reset_req;                          // rst_controller:reset_req -> [nios2_proc:reset_req, onchip_memory:reset_req, rst_translator:reset_req_in]
+
+	de1_blinker_Centaines centaines (
+		.clk      (clk_clk),                                 //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),         //               reset.reset_n
+		.address  (mm_interconnect_0_centaines_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_centaines_s1_readdata), //                    .readdata
+		.in_port  (centaines_external_connection_export)     // external_connection.export
+	);
+
+	de1_blinker_Centaines dizaines (
+		.clk      (clk_clk),                                //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),        //               reset.reset_n
+		.address  (mm_interconnect_0_dizaines_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_dizaines_s1_readdata), //                    .readdata
+		.in_port  (dizaines_external_connection_export)     // external_connection.export
+	);
+
+	de1_blinker_Centaines milliers (
+		.clk      (clk_clk),                                //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),        //               reset.reset_n
+		.address  (mm_interconnect_0_milliers_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_milliers_s1_readdata), //                    .readdata
+		.in_port  ()                                        // external_connection.export
+	);
 
 	de1_blinker_Seven_Seg_1 seven_seg_1 (
 		.clk        (clk_clk),                                     //                 clk.clk
@@ -124,6 +159,14 @@ module de1_blinker (
 		.chipselect (mm_interconnect_0_seven_seg_4_s1_chipselect), //                    .chipselect
 		.readdata   (mm_interconnect_0_seven_seg_4_s1_readdata),   //                    .readdata
 		.out_port   (seven_seg_4_external_connection_export)       // external_connection.export
+	);
+
+	de1_blinker_Centaines unites (
+		.clk      (clk_clk),                              //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),      //               reset.reset_n
+		.address  (mm_interconnect_0_unites_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_unites_s1_readdata), //                    .readdata
+		.in_port  (unites_external_connection_export)     // external_connection.export
 	);
 
 	de1_blinker_jtag_uart_0 jtag_uart_0 (
@@ -192,7 +235,7 @@ module de1_blinker (
 		.reset_req  (rst_controller_reset_out_reset_req)             //       .reset_req
 	);
 
-	de1_blinker_switcher switcher (
+	de1_blinker_Centaines switcher (
 		.clk      (clk_clk),                                //                 clk.clk
 		.reset_n  (~rst_controller_reset_out_reset),        //               reset.reset_n
 		.address  (mm_interconnect_0_switcher_s1_address),  //                  s1.address
@@ -222,6 +265,10 @@ module de1_blinker (
 		.nios2_proc_instruction_master_waitrequest      (nios2_proc_instruction_master_waitrequest),                   //                                         .waitrequest
 		.nios2_proc_instruction_master_read             (nios2_proc_instruction_master_read),                          //                                         .read
 		.nios2_proc_instruction_master_readdata         (nios2_proc_instruction_master_readdata),                      //                                         .readdata
+		.Centaines_s1_address                           (mm_interconnect_0_centaines_s1_address),                      //                             Centaines_s1.address
+		.Centaines_s1_readdata                          (mm_interconnect_0_centaines_s1_readdata),                     //                                         .readdata
+		.Dizaines_s1_address                            (mm_interconnect_0_dizaines_s1_address),                       //                              Dizaines_s1.address
+		.Dizaines_s1_readdata                           (mm_interconnect_0_dizaines_s1_readdata),                      //                                         .readdata
 		.jtag_uart_0_avalon_jtag_slave_address          (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_address),     //            jtag_uart_0_avalon_jtag_slave.address
 		.jtag_uart_0_avalon_jtag_slave_write            (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write),       //                                         .write
 		.jtag_uart_0_avalon_jtag_slave_read             (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read),        //                                         .read
@@ -234,6 +281,8 @@ module de1_blinker (
 		.led_s1_readdata                                (mm_interconnect_0_led_s1_readdata),                           //                                         .readdata
 		.led_s1_writedata                               (mm_interconnect_0_led_s1_writedata),                          //                                         .writedata
 		.led_s1_chipselect                              (mm_interconnect_0_led_s1_chipselect),                         //                                         .chipselect
+		.Milliers_s1_address                            (mm_interconnect_0_milliers_s1_address),                       //                              Milliers_s1.address
+		.Milliers_s1_readdata                           (mm_interconnect_0_milliers_s1_readdata),                      //                                         .readdata
 		.nios2_proc_jtag_debug_module_address           (mm_interconnect_0_nios2_proc_jtag_debug_module_address),      //             nios2_proc_jtag_debug_module.address
 		.nios2_proc_jtag_debug_module_write             (mm_interconnect_0_nios2_proc_jtag_debug_module_write),        //                                         .write
 		.nios2_proc_jtag_debug_module_read              (mm_interconnect_0_nios2_proc_jtag_debug_module_read),         //                                         .read
@@ -272,7 +321,9 @@ module de1_blinker (
 		.switcher_s1_address                            (mm_interconnect_0_switcher_s1_address),                       //                              switcher_s1.address
 		.switcher_s1_readdata                           (mm_interconnect_0_switcher_s1_readdata),                      //                                         .readdata
 		.sysid_1337_control_slave_address               (mm_interconnect_0_sysid_1337_control_slave_address),          //                 sysid_1337_control_slave.address
-		.sysid_1337_control_slave_readdata              (mm_interconnect_0_sysid_1337_control_slave_readdata)          //                                         .readdata
+		.sysid_1337_control_slave_readdata              (mm_interconnect_0_sysid_1337_control_slave_readdata),         //                                         .readdata
+		.Unites_s1_address                              (mm_interconnect_0_unites_s1_address),                         //                                Unites_s1.address
+		.Unites_s1_readdata                             (mm_interconnect_0_unites_s1_readdata)                         //                                         .readdata
 	);
 
 	de1_blinker_irq_mapper irq_mapper (
