@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEBA6U23I7
-set_global_assignment -name TOP_LEVEL_ENTITY de1_blinker
+set_global_assignment -name TOP_LEVEL_ENTITY compteurN
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:56:30  NOVEMBER 25, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION 15.0.2
@@ -49,9 +49,6 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 set_location_assignment PIN_Y24 -to switcher_external_connection_export[0]
 set_location_assignment PIN_W24 -to switcher_external_connection_export[1]
@@ -94,20 +91,12 @@ set_location_assignment PIN_AF22 -to seven_seg_4_external_connection_export[3]
 set_location_assignment PIN_AH21 -to seven_seg_4_external_connection_export[4]
 set_location_assignment PIN_AG20 -to seven_seg_4_external_connection_export[5]
 set_location_assignment PIN_AH23 -to seven_seg_4_external_connection_export[6]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name QSYS_FILE de1_blinker.qsys
-set_global_assignment -name VHDL_FILE ../../IP_Frequencemetre/TPfinal2.vhd
-set_global_assignment -name BDF_FILE ../../IP_Frequencemetre/TPfinal2.bdf
 set_global_assignment -name BDF_FILE ../../IP_Frequencemetre/TPfinal.bdf
-set_global_assignment -name BDF_FILE ../../IP_Frequencemetre/TP23.bdf
-set_global_assignment -name VHDL_FILE ../../IP_Frequencemetre/sevseg.vhd
-set_global_assignment -name VHDL_FILE ../../IP_Frequencemetre/lpm_mux1.vhd
-set_global_assignment -name VHDL_FILE ../../IP_Frequencemetre/lpm_mux0.vhd
-set_global_assignment -name VHDL_FILE ../../IP_Frequencemetre/latch_data.vhd
-set_global_assignment -name VHDL_FILE ../../IP_Frequencemetre/Fenetre_Mesure.vhd
-set_global_assignment -name VHDL_FILE ../../IP_Frequencemetre/diviseur.vhd
 set_global_assignment -name VHDL_FILE ../../IP_Frequencemetre/compteurN.vhd
 set_global_assignment -name VHDL_FILE ../../IP_Frequencemetre/compt_latch.vhd
-set_global_assignment -name VHDL_FILE ../../IP_Frequencemetre/binaire_7seg.vhd
-set_global_assignment -name QIP_FILE de1_blinker/synthesis/de1_blinker.qip
+set_global_assignment -name QSYS_FILE de1_blinker.qsys
 set_global_assignment -name CDF_FILE Chain1.cdf

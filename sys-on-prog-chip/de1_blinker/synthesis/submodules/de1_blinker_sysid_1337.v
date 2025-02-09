@@ -36,7 +36,7 @@ module de1_blinker_sysid_1337 (
 
   wire    [ 31: 0] readdata;
   //control_slave, which is an e_avalon_slave
-  assign readdata = address ? 1737994685 : 4919;
+  assign readdata = address ? 1738763134 : 4919;
 
 endmodule
 

@@ -1,5 +1,5 @@
 Flow report for chip1
-Mon Jan 27 17:21:09 2025
+Wed Feb 05 14:56:27 2025
 Quartus II 64-Bit Version 15.0.2 Build 153 07/15/2015 SJ Web Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +---------------------------------+--------------------------------------------+
-; Flow Status                     ; Successful - Mon Jan 27 17:20:53 2025      ;
+; Flow Status                     ; Successful - Wed Feb 05 14:56:21 2025      ;
 ; Quartus II 64-Bit Version       ; 15.0.2 Build 153 07/15/2015 SJ Web Edition ;
 ; Revision Name                   ; chip1                                      ;
-; Top-level Entity Name           ; de1_blinker                                ;
+; Top-level Entity Name           ; compteurN                                  ;
 ; Family                          ; Cyclone V                                  ;
 ; Device                          ; 5CSEBA6U23I7                               ;
 ; Timing Models                   ; Final                                      ;
-; Logic utilization (in ALMs)     ; 851 / 41,910 ( 2 % )                       ;
-; Total registers                 ; 1105                                       ;
-; Total pins                      ; 57 / 314 ( 18 % )                          ;
+; Logic utilization (in ALMs)     ; 15 / 41,910 ( < 1 % )                      ;
+; Total registers                 ; 16                                         ;
+; Total pins                      ; 19 / 314 ( 6 % )                           ;
 ; Total virtual pins              ; 0                                          ;
-; Total block memory bits         ; 1,611,264 / 5,662,720 ( 28 % )             ;
+; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                      ;
 ; Total DSP Blocks                ; 0 / 112 ( 0 % )                            ;
 ; Total HSSI RX PCSs              ; 0                                          ;
 ; Total HSSI PMA RX Deserializers ; 0                                          ;
@@ -68,35 +68,28 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/27/2025 17:18:54 ;
+; Start date & time ; 02/05/2025 14:54:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; chip1               ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                               ;
-+-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                                         ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 22072706855232.173799473415228                                ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 100                                                           ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; -40                                                           ; --            ; --          ; --         ;
-; MISC_FILE                           ; de1_blinker/synthesis/../de1_blinker.cmp                      ; --            ; --          ; --         ;
-; MISC_FILE                           ; de1_blinker/synthesis/../../de1_blinker.qsys                  ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; 16764057                                                      ; --            ; de1_blinker ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                         ; --            ; de1_blinker ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                                        ; --            ; de1_blinker ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                           ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                         ; --            ; --          ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                  ; --            ; --          ; --         ;
-; SLD_FILE                            ; de1_blinker/synthesis/de1_blinker.regmap                      ; --            ; --          ; --         ;
-; SLD_FILE                            ; de1_blinker/synthesis/de1_blinker.debuginfo                   ; --            ; --          ; --         ;
-; SLD_INFO                            ; QSYS_NAME de1_blinker HAS_SOPCINFO 1 GENERATION_ID 1737994685 ; --            ; de1_blinker ; --         ;
-; SOPCINFO_FILE                       ; de1_blinker/synthesis/../../de1_blinker.sopcinfo              ; --            ; --          ; --         ;
-; SYNTHESIS_ONLY_QIP                  ; On                                                            ; --            ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; de1_blinker                                                   ; chip1         ; --          ; --         ;
-+-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                       ;
++-------------------------------------+---------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+---------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 22072706855232.173876369315884        ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 100                                   ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; -40                                   ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; compteurN   ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; compteurN   ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; compteurN   ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; compteurN                             ; chip1         ; --          ; --         ;
++-------------------------------------+---------------------------------------+---------------+-------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -104,11 +97,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:34     ; 1.0                     ; 5030 MB             ; 00:00:20                           ;
-; Fitter                    ; 00:01:08     ; 1.0                     ; 6129 MB             ; 00:00:56                           ;
-; Assembler                 ; 00:00:12     ; 1.0                     ; 4931 MB             ; 00:00:08                           ;
-; TimeQuest Timing Analyzer ; 00:00:15     ; 1.0                     ; 5309 MB             ; 00:00:13                           ;
-; Total                     ; 00:02:09     ; --                      ; --                  ; 00:01:37                           ;
+; Analysis & Synthesis      ; 00:00:44     ; 1.0                     ; 4914 MB             ; 00:00:40                           ;
+; Fitter                    ; 00:00:34     ; 1.0                     ; 6068 MB             ; 00:00:28                           ;
+; Assembler                 ; 00:00:07     ; 1.0                     ; 4871 MB             ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 5182 MB             ; 00:00:04                           ;
+; Total                     ; 00:01:30     ; --                      ; --                  ; 00:01:17                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
