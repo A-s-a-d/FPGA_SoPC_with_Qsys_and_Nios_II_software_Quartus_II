@@ -1,0 +1,150 @@
+Flow report for Blinker
+Wed Feb 12 18:35:24 2025
+Quartus II 64-Bit Version 15.0.2 Build 153 07/15/2015 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++---------------------------------+--------------------------------------------+
+; Flow Status                     ; Successful - Wed Feb 12 18:35:24 2025      ;
+; Quartus II 64-Bit Version       ; 15.0.2 Build 153 07/15/2015 SJ Web Edition ;
+; Revision Name                   ; Blinker                                    ;
+; Top-level Entity Name           ; TPfinal2                                   ;
+; Family                          ; Cyclone V                                  ;
+; Device                          ; 5CSEBA6U23I7                               ;
+; Timing Models                   ; Final                                      ;
+; Logic utilization (in ALMs)     ; 151 / 41,910 ( < 1 % )                     ;
+; Total registers                 ; 216                                        ;
+; Total pins                      ; 21 / 314 ( 7 % )                           ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                      ;
+; Total DSP Blocks                ; 0 / 112 ( 0 % )                            ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI PMA TX Serializers   ; 0                                          ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                              ;
++---------------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 02/12/2025 17:49:36 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; Blinker             ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                   ;
++-------------------------------------+---------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                                         ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 22072706855232.173937897618024                                ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                          ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                                        ; <None>        ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 100                                                           ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; -40                                                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; de1_blinker/synthesis/../de1_blinker.cmp                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; de1_blinker/synthesis/../../de1_blinker.qsys                  ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                                                      ; --            ; TPfinal2    ; Top            ;
+; PARTITION_COLOR                     ; 16764057                                                      ; --            ; compteurN   ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                         ; --            ; TPfinal2    ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                         ; --            ; compteurN   ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                        ; --            ; TPfinal2    ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                        ; --            ; compteurN   ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                           ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                         ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                  ; --            ; --          ; --             ;
+; SLD_FILE                            ; de1_blinker/synthesis/de1_blinker.regmap                      ; --            ; --          ; --             ;
+; SLD_FILE                            ; de1_blinker/synthesis/de1_blinker.debuginfo                   ; --            ; --          ; --             ;
+; SLD_INFO                            ; QSYS_NAME de1_blinker HAS_SOPCINFO 1 GENERATION_ID 1739302195 ; --            ; de1_blinker ; --             ;
+; SOPCINFO_FILE                       ; de1_blinker/synthesis/../../de1_blinker.sopcinfo              ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                            ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; TPfinal2                                                      ; Blinker       ; --          ; --             ;
++-------------------------------------+---------------------------------------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 4923 MB             ; 00:00:10                           ;
+; Fitter                    ; 00:01:01     ; 1.0                     ; 6134 MB             ; 00:00:33                           ;
+; Assembler                 ; 00:00:09     ; 1.0                     ; 4879 MB             ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 5193 MB             ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4785 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4767 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4775 MB             ; 00:00:01                           ;
+; Total                     ; 00:01:34     ; --                      ; --                  ; 00:00:55                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; AETHERLINX       ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; AETHERLINX       ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; AETHERLINX       ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; AETHERLINX       ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; AETHERLINX       ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; AETHERLINX       ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; AETHERLINX       ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off Blinker -c Blinker
+quartus_fit --read_settings_files=off --write_settings_files=off Blinker -c Blinker
+quartus_asm --read_settings_files=off --write_settings_files=off Blinker -c Blinker
+quartus_sta Blinker -c Blinker
+quartus_eda --read_settings_files=off --write_settings_files=off Blinker -c Blinker
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog --write_settings_files=off Blinker -c Blinker --vector_source=C:/FPGA_Proj/Blinker_NiosII/Waveform.vwf --testbench_file=C:/FPGA_Proj/Blinker_NiosII/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/FPGA_Proj/Blinker_NiosII/simulation/qsim/ Blinker -c Blinker
+
+
+

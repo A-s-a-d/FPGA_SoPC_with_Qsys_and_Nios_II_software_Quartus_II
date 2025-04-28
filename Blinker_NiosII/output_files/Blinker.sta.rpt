@@ -1,0 +1,1349 @@
+TimeQuest Timing Analyzer report for Blinker
+Wed Feb 12 18:08:53 2025
+Quartus II 64-Bit Version 15.0.2 Build 153 07/15/2015 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow 1100mV 100C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1100mV 100C Model Setup Summary
+  9. Slow 1100mV 100C Model Hold Summary
+ 10. Slow 1100mV 100C Model Recovery Summary
+ 11. Slow 1100mV 100C Model Removal Summary
+ 12. Slow 1100mV 100C Model Minimum Pulse Width Summary
+ 13. Setup Times
+ 14. Hold Times
+ 15. Clock to Output Times
+ 16. Minimum Clock to Output Times
+ 17. Slow 1100mV 100C Model Metastability Summary
+ 18. Slow 1100mV -40C Model Fmax Summary
+ 19. Slow 1100mV -40C Model Setup Summary
+ 20. Slow 1100mV -40C Model Hold Summary
+ 21. Slow 1100mV -40C Model Recovery Summary
+ 22. Slow 1100mV -40C Model Removal Summary
+ 23. Slow 1100mV -40C Model Minimum Pulse Width Summary
+ 24. Setup Times
+ 25. Hold Times
+ 26. Clock to Output Times
+ 27. Minimum Clock to Output Times
+ 28. Slow 1100mV -40C Model Metastability Summary
+ 29. Fast 1100mV 100C Model Setup Summary
+ 30. Fast 1100mV 100C Model Hold Summary
+ 31. Fast 1100mV 100C Model Recovery Summary
+ 32. Fast 1100mV 100C Model Removal Summary
+ 33. Fast 1100mV 100C Model Minimum Pulse Width Summary
+ 34. Setup Times
+ 35. Hold Times
+ 36. Clock to Output Times
+ 37. Minimum Clock to Output Times
+ 38. Fast 1100mV 100C Model Metastability Summary
+ 39. Fast 1100mV -40C Model Setup Summary
+ 40. Fast 1100mV -40C Model Hold Summary
+ 41. Fast 1100mV -40C Model Recovery Summary
+ 42. Fast 1100mV -40C Model Removal Summary
+ 43. Fast 1100mV -40C Model Minimum Pulse Width Summary
+ 44. Setup Times
+ 45. Hold Times
+ 46. Clock to Output Times
+ 47. Minimum Clock to Output Times
+ 48. Fast 1100mV -40C Model Metastability Summary
+ 49. Multicorner Timing Analysis Summary
+ 50. Setup Times
+ 51. Hold Times
+ 52. Clock to Output Times
+ 53. Minimum Clock to Output Times
+ 54. Board Trace Model Assignments
+ 55. Input Transition Times
+ 56. Signal Integrity Metrics (Slow 1100mv n40c Model)
+ 57. Signal Integrity Metrics (Slow 1100mv 100c Model)
+ 58. Signal Integrity Metrics (Fast 1100mv n40c Model)
+ 59. Signal Integrity Metrics (Fast 1100mv 100c Model)
+ 60. Setup Transfers
+ 61. Hold Transfers
+ 62. Recovery Transfers
+ 63. Removal Transfers
+ 64. Report TCCS
+ 65. Report RSKM
+ 66. Unconstrained Paths
+ 67. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 15.0.2 Build 153 07/15/2015 SJ Web Edition ;
+; Revision Name      ; Blinker                                            ;
+; Device Family      ; Cyclone V                                          ;
+; Device Name        ; 5CSEBA6U23I7                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Enabled                                            ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------+
+; SDC File List                                                                                    ;
++--------------------------------------------------------------+--------+--------------------------+
+; SDC File Path                                                ; Status ; Read at                  ;
++--------------------------------------------------------------+--------+--------------------------+
+; de1_blinker/synthesis/submodules/altera_reset_controller.sdc ; OK     ; Wed Feb 12 18:08:47 2025 ;
+; de1_blinker/synthesis/submodules/de1_blinker_nios2_proc.sdc  ; OK     ; Wed Feb 12 18:08:47 2025 ;
++--------------------------------------------------------------+--------+--------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                             ;
++------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------+
+; Clock Name                               ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                      ;
++------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------+
+; clock_27Mhz                              ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock_27Mhz }                              ;
+; clock_50Mhz                              ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock_50Mhz }                              ;
+; Fenetre_Mesure:b2v_inst21|latch_compteur ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Fenetre_Mesure:b2v_inst21|latch_compteur } ;
+; sel[0]                                   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { sel[0] }                                   ;
++------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------+
+
+
++---------------------------------------------------+
+; Slow 1100mV 100C Model Fmax Summary               ;
++------------+-----------------+-------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name  ; Note ;
++------------+-----------------+-------------+------+
+; 148.92 MHz ; 148.92 MHz      ; clock_50Mhz ;      ;
+; 169.49 MHz ; 169.49 MHz      ; clock_27Mhz ;      ;
+; 185.49 MHz ; 185.49 MHz      ; sel[0]      ;      ;
++------------+-----------------+-------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------------------------------------+
+; Slow 1100mV 100C Model Setup Summary                              ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; sel[0]                                   ; -9.209 ; -121.181      ;
+; Fenetre_Mesure:b2v_inst21|latch_compteur ; -6.636 ; -100.705      ;
+; clock_50Mhz                              ; -5.715 ; -665.824      ;
+; clock_27Mhz                              ; -4.900 ; -157.472      ;
++------------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------+
+; Slow 1100mV 100C Model Hold Summary                              ;
++------------------------------------------+-------+---------------+
+; Clock                                    ; Slack ; End Point TNS ;
++------------------------------------------+-------+---------------+
+; clock_27Mhz                              ; 0.453 ; 0.000         ;
+; clock_50Mhz                              ; 0.453 ; 0.000         ;
+; sel[0]                                   ; 0.534 ; 0.000         ;
+; Fenetre_Mesure:b2v_inst21|latch_compteur ; 4.634 ; 0.000         ;
++------------------------------------------+-------+---------------+
+
+
++-----------------------------------------+
+; Slow 1100mV 100C Model Recovery Summary ;
++--------+--------+-----------------------+
+; Clock  ; Slack  ; End Point TNS         ;
++--------+--------+-----------------------+
+; sel[0] ; -2.069 ; -58.732               ;
++--------+--------+-----------------------+
+
+
++----------------------------------------+
+; Slow 1100mV 100C Model Removal Summary ;
++--------+-------+-----------------------+
+; Clock  ; Slack ; End Point TNS         ;
++--------+-------+-----------------------+
+; sel[0] ; 0.907 ; 0.000                 ;
++--------+-------+-----------------------+
+
+
++-------------------------------------------------------------------+
+; Slow 1100mV 100C Model Minimum Pulse Width Summary                ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; sel[0]                                   ; -0.691 ; -67.037       ;
+; clock_50Mhz                              ; -0.538 ; -103.089      ;
+; clock_27Mhz                              ; -0.538 ; -26.668       ;
+; Fenetre_Mesure:b2v_inst21|latch_compteur ; -0.538 ; -12.552       ;
++------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; reset     ; sel[0]     ; 1.928 ; 2.115 ; Fall       ; sel[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; reset     ; sel[0]     ; 0.548 ; 0.308 ; Fall       ; sel[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                               ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; Data Port        ; Clock Port                               ; Rise  ; Fall  ; Clock Edge ; Clock Reference                          ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; SEG_Centaine[*]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.642 ; 7.102 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[0] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.040 ; 6.263 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[1] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.642 ; 7.102 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[2] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.465 ; 6.843 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[3] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.371 ; 6.746 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Dizaine[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.518 ; 6.923 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.437 ; 6.808 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.518 ; 6.923 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.334 ; 6.697 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.504 ; 6.879 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Millier[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.354 ; 6.652 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.029 ; 6.230 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.354 ; 6.652 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.249 ; 6.520 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.139 ; 6.447 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Unite[*]     ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.506 ; 5.512 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[0]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.425 ; 5.380 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[1]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.506 ; 5.512 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[2]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.489 ; 5.452 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[3]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.422 ; 5.383 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                       ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; Data Port        ; Clock Port                               ; Rise  ; Fall  ; Clock Edge ; Clock Reference                          ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; SEG_Centaine[*]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.501 ; 5.652 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[0] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.501 ; 5.652 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[1] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.051 ; 6.443 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[2] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.913 ; 6.239 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[3] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.817 ; 6.136 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Dizaine[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.786 ; 6.094 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.873 ; 6.187 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.947 ; 6.295 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.786 ; 6.094 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.939 ; 6.257 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Millier[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.494 ; 5.619 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.494 ; 5.619 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.784 ; 6.012 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.688 ; 5.882 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.581 ; 5.828 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Unite[*]     ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 4.945 ; 4.897 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[0]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 4.945 ; 4.897 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[1]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.034 ; 5.033 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[2]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.014 ; 4.977 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[3]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 4.947 ; 4.910 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+
+
+------------------------------------------------
+; Slow 1100mV 100C Model Metastability Summary ;
+------------------------------------------------
+No synchronizer chains to report.
+
+
++---------------------------------------------------+
+; Slow 1100mV -40C Model Fmax Summary               ;
++------------+-----------------+-------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name  ; Note ;
++------------+-----------------+-------------+------+
+; 143.64 MHz ; 143.64 MHz      ; clock_50Mhz ;      ;
+; 165.13 MHz ; 165.13 MHz      ; clock_27Mhz ;      ;
+; 191.31 MHz ; 191.31 MHz      ; sel[0]      ;      ;
++------------+-----------------+-------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------------------------------------+
+; Slow 1100mV -40C Model Setup Summary                              ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; sel[0]                                   ; -9.141 ; -119.097      ;
+; Fenetre_Mesure:b2v_inst21|latch_compteur ; -6.559 ; -99.482       ;
+; clock_50Mhz                              ; -5.962 ; -687.755      ;
+; clock_27Mhz                              ; -5.056 ; -162.882      ;
++------------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------+
+; Slow 1100mV -40C Model Hold Summary                              ;
++------------------------------------------+-------+---------------+
+; Clock                                    ; Slack ; End Point TNS ;
++------------------------------------------+-------+---------------+
+; sel[0]                                   ; 0.358 ; 0.000         ;
+; clock_27Mhz                              ; 0.502 ; 0.000         ;
+; clock_50Mhz                              ; 0.502 ; 0.000         ;
+; Fenetre_Mesure:b2v_inst21|latch_compteur ; 4.675 ; 0.000         ;
++------------------------------------------+-------+---------------+
+
+
++-----------------------------------------+
+; Slow 1100mV -40C Model Recovery Summary ;
++--------+--------+-----------------------+
+; Clock  ; Slack  ; End Point TNS         ;
++--------+--------+-----------------------+
+; sel[0] ; -1.791 ; -50.608               ;
++--------+--------+-----------------------+
+
+
++----------------------------------------+
+; Slow 1100mV -40C Model Removal Summary ;
++--------+-------+-----------------------+
+; Clock  ; Slack ; End Point TNS         ;
++--------+-------+-----------------------+
+; sel[0] ; 0.771 ; 0.000                 ;
++--------+-------+-----------------------+
+
+
++-------------------------------------------------------------------+
+; Slow 1100mV -40C Model Minimum Pulse Width Summary                ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; sel[0]                                   ; -0.790 ; -72.682       ;
+; clock_50Mhz                              ; -0.538 ; -111.243      ;
+; clock_27Mhz                              ; -0.538 ; -26.024       ;
+; Fenetre_Mesure:b2v_inst21|latch_compteur ; -0.538 ; -12.486       ;
++------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; reset     ; sel[0]     ; 1.864 ; 1.992 ; Fall       ; sel[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; reset     ; sel[0]     ; 0.620 ; 0.410 ; Fall       ; sel[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                               ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; Data Port        ; Clock Port                               ; Rise  ; Fall  ; Clock Edge ; Clock Reference                          ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; SEG_Centaine[*]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.062 ; 6.566 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[0] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.504 ; 5.808 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[1] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.062 ; 6.566 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[2] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.912 ; 6.347 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[3] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.831 ; 6.229 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Dizaine[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.975 ; 6.398 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.887 ; 6.285 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.975 ; 6.398 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.801 ; 6.192 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.928 ; 6.361 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Millier[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.776 ; 6.132 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.501 ; 5.800 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.776 ; 6.132 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.701 ; 6.055 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.625 ; 5.973 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Unite[*]     ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.010 ; 5.087 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[0]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 4.944 ; 4.950 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[1]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.010 ; 5.087 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[2]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 4.989 ; 5.029 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[3]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 4.942 ; 4.957 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                       ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; Data Port        ; Clock Port                               ; Rise  ; Fall  ; Clock Edge ; Clock Reference                          ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; SEG_Centaine[*]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.007 ; 5.251 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[0] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.007 ; 5.251 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[1] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.522 ; 5.929 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[2] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.405 ; 5.757 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[3] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.322 ; 5.631 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Dizaine[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.297 ; 5.600 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.369 ; 5.677 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.450 ; 5.785 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.297 ; 5.600 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.409 ; 5.750 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Millier[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.007 ; 5.237 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.007 ; 5.237 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.256 ; 5.520 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.185 ; 5.472 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.112 ; 5.406 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Unite[*]     ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 4.505 ; 4.514 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[0]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 4.505 ; 4.514 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[1]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 4.579 ; 4.654 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[2]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 4.556 ; 4.600 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[3]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 4.510 ; 4.529 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+
+
+------------------------------------------------
+; Slow 1100mV -40C Model Metastability Summary ;
+------------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------+
+; Fast 1100mV 100C Model Setup Summary                              ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; sel[0]                                   ; -4.320 ; -52.138       ;
+; Fenetre_Mesure:b2v_inst21|latch_compteur ; -3.575 ; -54.916       ;
+; clock_50Mhz                              ; -2.152 ; -246.773      ;
+; clock_27Mhz                              ; -1.895 ; -60.004       ;
++------------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------+
+; Fast 1100mV 100C Model Hold Summary                              ;
++------------------------------------------+-------+---------------+
+; Clock                                    ; Slack ; End Point TNS ;
++------------------------------------------+-------+---------------+
+; sel[0]                                   ; 0.166 ; 0.000         ;
+; clock_27Mhz                              ; 0.184 ; 0.000         ;
+; clock_50Mhz                              ; 0.184 ; 0.000         ;
+; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.588 ; 0.000         ;
++------------------------------------------+-------+---------------+
+
+
++-----------------------------------------+
+; Fast 1100mV 100C Model Recovery Summary ;
++--------+--------+-----------------------+
+; Clock  ; Slack  ; End Point TNS         ;
++--------+--------+-----------------------+
+; sel[0] ; -1.106 ; -30.399               ;
++--------+--------+-----------------------+
+
+
++----------------------------------------+
+; Fast 1100mV 100C Model Removal Summary ;
++--------+-------+-----------------------+
+; Clock  ; Slack ; End Point TNS         ;
++--------+-------+-----------------------+
+; sel[0] ; 0.453 ; 0.000                 ;
++--------+-------+-----------------------+
+
+
++-------------------------------------------------------------------+
+; Fast 1100mV 100C Model Minimum Pulse Width Summary                ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; sel[0]                                   ; -0.678 ; -33.623       ;
+; clock_27Mhz                              ; -0.369 ; -12.936       ;
+; clock_50Mhz                              ; -0.092 ; -11.728       ;
+; Fenetre_Mesure:b2v_inst21|latch_compteur ; 0.107  ; 0.000         ;
++------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; reset     ; sel[0]     ; 0.974 ; 1.474 ; Fall       ; sel[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; reset     ; sel[0]     ; 0.604 ; 0.110 ; Fall       ; sel[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                               ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; Data Port        ; Clock Port                               ; Rise  ; Fall  ; Clock Edge ; Clock Reference                          ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; SEG_Centaine[*]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.725 ; 4.238 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[0] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.271 ; 3.535 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[1] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.725 ; 4.238 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[2] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.579 ; 4.025 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[3] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.572 ; 4.007 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Dizaine[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.646 ; 4.110 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.598 ; 4.018 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.646 ; 4.110 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.547 ; 3.974 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.599 ; 4.034 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Millier[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.536 ; 3.915 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.227 ; 3.480 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.536 ; 3.915 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.383 ; 3.695 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.383 ; 3.708 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Unite[*]     ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.953 ; 3.053 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[0]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.952 ; 3.003 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[1]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.952 ; 3.053 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[2]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.953 ; 3.024 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[3]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.941 ; 3.013 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                       ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; Data Port        ; Clock Port                               ; Rise  ; Fall  ; Clock Edge ; Clock Reference                          ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; SEG_Centaine[*]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.987 ; 3.201 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[0] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.987 ; 3.201 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[1] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.407 ; 3.863 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[2] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.282 ; 3.689 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[3] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.273 ; 3.667 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Dizaine[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.252 ; 3.639 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.298 ; 3.677 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.340 ; 3.763 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.252 ; 3.639 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.299 ; 3.693 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Millier[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.947 ; 3.150 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.947 ; 3.150 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.233 ; 3.557 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.088 ; 3.342 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.087 ; 3.363 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Unite[*]     ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.691 ; 2.747 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[0]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.700 ; 2.747 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[1]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.704 ; 2.798 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[2]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.703 ; 2.771 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[3]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.691 ; 2.762 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+
+
+------------------------------------------------
+; Fast 1100mV 100C Model Metastability Summary ;
+------------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------+
+; Fast 1100mV -40C Model Setup Summary                              ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; sel[0]                                   ; -3.816 ; -42.494       ;
+; Fenetre_Mesure:b2v_inst21|latch_compteur ; -3.261 ; -50.109       ;
+; clock_50Mhz                              ; -1.842 ; -208.915      ;
+; clock_27Mhz                              ; -1.587 ; -50.325       ;
++------------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------+
+; Fast 1100mV -40C Model Hold Summary                              ;
++------------------------------------------+-------+---------------+
+; Clock                                    ; Slack ; End Point TNS ;
++------------------------------------------+-------+---------------+
+; sel[0]                                   ; 0.106 ; 0.000         ;
+; clock_27Mhz                              ; 0.169 ; 0.000         ;
+; clock_50Mhz                              ; 0.169 ; 0.000         ;
+; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.414 ; 0.000         ;
++------------------------------------------+-------+---------------+
+
+
++-----------------------------------------+
+; Fast 1100mV -40C Model Recovery Summary ;
++--------+--------+-----------------------+
+; Clock  ; Slack  ; End Point TNS         ;
++--------+--------+-----------------------+
+; sel[0] ; -0.750 ; -20.524               ;
++--------+--------+-----------------------+
+
+
++----------------------------------------+
+; Fast 1100mV -40C Model Removal Summary ;
++--------+-------+-----------------------+
+; Clock  ; Slack ; End Point TNS         ;
++--------+-------+-----------------------+
+; sel[0] ; 0.340 ; 0.000                 ;
++--------+-------+-----------------------+
+
+
++-------------------------------------------------------------------+
+; Fast 1100mV -40C Model Minimum Pulse Width Summary                ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; sel[0]                                   ; -0.601 ; -28.107       ;
+; clock_27Mhz                              ; -0.325 ; -10.865       ;
+; clock_50Mhz                              ; -0.089 ; -11.544       ;
+; Fenetre_Mesure:b2v_inst21|latch_compteur ; 0.125  ; 0.000         ;
++------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; reset     ; sel[0]     ; 0.737 ; 1.211 ; Fall       ; sel[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; reset     ; sel[0]     ; 0.610 ; 0.127 ; Fall       ; sel[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                               ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; Data Port        ; Clock Port                               ; Rise  ; Fall  ; Clock Edge ; Clock Reference                          ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; SEG_Centaine[*]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.200 ; 3.523 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[0] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.805 ; 2.992 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[1] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.200 ; 3.523 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[2] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.090 ; 3.363 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[3] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.047 ; 3.325 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Dizaine[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.110 ; 3.410 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.074 ; 3.342 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.110 ; 3.410 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.026 ; 3.304 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.086 ; 3.358 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Millier[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.010 ; 3.265 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.779 ; 2.962 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 3.010 ; 3.265 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.914 ; 3.137 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.884 ; 3.116 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Unite[*]     ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.564 ; 2.611 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[0]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.535 ; 2.556 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[1]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.564 ; 2.611 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[2]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.551 ; 2.575 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[3]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.519 ; 2.558 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                       ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; Data Port        ; Clock Port                               ; Rise  ; Fall  ; Clock Edge ; Clock Reference                          ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; SEG_Centaine[*]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.544 ; 2.697 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[0] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.544 ; 2.697 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[1] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.910 ; 3.153 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[2] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.818 ; 3.021 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[3] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.773 ; 2.980 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Dizaine[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.755 ; 2.963 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.798 ; 2.993 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.830 ; 3.056 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.755 ; 2.963 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.809 ; 3.007 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Millier[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.522 ; 2.670 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.522 ; 2.670 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.734 ; 2.919 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.644 ; 2.828 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.613 ; 2.812 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Unite[*]     ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.285 ; 2.318 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[0]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.298 ; 2.318 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[1]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.331 ; 2.374 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[2]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.317 ; 2.341 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[3]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.285 ; 2.324 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+
+
+------------------------------------------------
+; Fast 1100mV -40C Model Metastability Summary ;
+------------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                      ;
++-------------------------------------------+-----------+-------+----------+---------+---------------------+
+; Clock                                     ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack                          ; -9.209    ; 0.106 ; -2.069   ; 0.340   ; -0.790              ;
+;  Fenetre_Mesure:b2v_inst21|latch_compteur ; -6.636    ; 2.414 ; N/A      ; N/A     ; -0.538              ;
+;  clock_27Mhz                              ; -5.056    ; 0.169 ; N/A      ; N/A     ; -0.538              ;
+;  clock_50Mhz                              ; -5.962    ; 0.169 ; N/A      ; N/A     ; -0.538              ;
+;  sel[0]                                   ; -9.209    ; 0.106 ; -2.069   ; 0.340   ; -0.790              ;
+; Design-wide TNS                           ; -1069.216 ; 0.0   ; -58.732  ; 0.0     ; -222.435            ;
+;  Fenetre_Mesure:b2v_inst21|latch_compteur ; -100.705  ; 0.000 ; N/A      ; N/A     ; -12.552             ;
+;  clock_27Mhz                              ; -162.882  ; 0.000 ; N/A      ; N/A     ; -26.668             ;
+;  clock_50Mhz                              ; -687.755  ; 0.000 ; N/A      ; N/A     ; -111.243            ;
+;  sel[0]                                   ; -121.181  ; 0.000 ; -58.732  ; 0.000   ; -72.682             ;
++-------------------------------------------+-----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; reset     ; sel[0]     ; 1.928 ; 2.115 ; Fall       ; sel[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; reset     ; sel[0]     ; 0.620 ; 0.410 ; Fall       ; sel[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                               ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; Data Port        ; Clock Port                               ; Rise  ; Fall  ; Clock Edge ; Clock Reference                          ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; SEG_Centaine[*]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.642 ; 7.102 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[0] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.040 ; 6.263 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[1] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.642 ; 7.102 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[2] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.465 ; 6.843 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[3] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.371 ; 6.746 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Dizaine[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.518 ; 6.923 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.437 ; 6.808 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.518 ; 6.923 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.334 ; 6.697 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.504 ; 6.879 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Millier[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.354 ; 6.652 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.029 ; 6.230 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.354 ; 6.652 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.249 ; 6.520 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 6.139 ; 6.447 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Unite[*]     ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.506 ; 5.512 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[0]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.425 ; 5.380 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[1]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.506 ; 5.512 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[2]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.489 ; 5.452 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[3]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 5.422 ; 5.383 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                       ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; Data Port        ; Clock Port                               ; Rise  ; Fall  ; Clock Edge ; Clock Reference                          ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; SEG_Centaine[*]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.544 ; 2.697 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[0] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.544 ; 2.697 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[1] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.910 ; 3.153 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[2] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.818 ; 3.021 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Centaine[3] ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.773 ; 2.980 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Dizaine[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.755 ; 2.963 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.798 ; 2.993 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.830 ; 3.056 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.755 ; 2.963 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Dizaine[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.809 ; 3.007 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Millier[*]   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.522 ; 2.670 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[0]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.522 ; 2.670 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[1]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.734 ; 2.919 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[2]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.644 ; 2.828 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Millier[3]  ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.613 ; 2.812 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+; SEG_Unite[*]     ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.285 ; 2.318 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[0]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.298 ; 2.318 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[1]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.331 ; 2.374 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[2]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.317 ; 2.341 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
+;  SEG_Unite[3]    ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 2.285 ; 2.324 ; Rise       ; Fenetre_Mesure:b2v_inst21|latch_compteur ;
++------------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                      ;
++-----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin             ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++-----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; SEG_Centaine[0] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SEG_Centaine[1] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SEG_Centaine[2] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SEG_Centaine[3] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SEG_Dizaine[0]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SEG_Dizaine[1]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SEG_Dizaine[2]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SEG_Dizaine[3]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SEG_Millier[0]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SEG_Millier[1]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SEG_Millier[2]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SEG_Millier[3]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SEG_Unite[0]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SEG_Unite[1]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SEG_Unite[2]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SEG_Unite[3]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++-----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------+
+; Input Transition Times                                         ;
++-------------+--------------+-----------------+-----------------+
+; Pin         ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------+--------------+-----------------+-----------------+
+; reset       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clock_27Mhz ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sel[0]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sel[1]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clock_50Mhz ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------+--------------+-----------------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1100mv n40c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin             ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; SEG_Centaine[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.56e-08 V                   ; 2.43 V              ; -0.0607 V           ; 0.35 V                               ; 0.108 V                              ; 3.1e-10 s                   ; 4.28e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 1.56e-08 V                  ; 2.43 V             ; -0.0607 V          ; 0.35 V                              ; 0.108 V                             ; 3.1e-10 s                  ; 4.28e-10 s                 ; No                        ; No                        ;
+; SEG_Centaine[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.56e-08 V                   ; 2.43 V              ; -0.0607 V           ; 0.35 V                               ; 0.108 V                              ; 3.1e-10 s                   ; 4.28e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 1.56e-08 V                  ; 2.43 V             ; -0.0607 V          ; 0.35 V                              ; 0.108 V                             ; 3.1e-10 s                  ; 4.28e-10 s                 ; No                        ; No                        ;
+; SEG_Centaine[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.56e-08 V                   ; 2.43 V              ; -0.0617 V           ; 0.35 V                               ; 0.107 V                              ; 3.1e-10 s                   ; 4.28e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 1.56e-08 V                  ; 2.43 V             ; -0.0617 V          ; 0.35 V                              ; 0.107 V                             ; 3.1e-10 s                  ; 4.28e-10 s                 ; No                        ; No                        ;
+; SEG_Centaine[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.6e-08 V                    ; 2.42 V              ; -0.0509 V           ; 0.197 V                              ; 0.118 V                              ; 4.57e-10 s                  ; 4.47e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.6e-08 V                   ; 2.42 V             ; -0.0509 V          ; 0.197 V                             ; 0.118 V                             ; 4.57e-10 s                 ; 4.47e-10 s                 ; No                        ; Yes                       ;
+; SEG_Dizaine[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.33e-08 V                   ; 2.36 V              ; -0.0253 V           ; 0.132 V                              ; 0.078 V                              ; 4.45e-10 s                  ; 4.26e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.33e-08 V                  ; 2.36 V             ; -0.0253 V          ; 0.132 V                             ; 0.078 V                             ; 4.45e-10 s                 ; 4.26e-10 s                 ; No                        ; Yes                       ;
+; SEG_Dizaine[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.6e-08 V                    ; 2.42 V              ; -0.0509 V           ; 0.197 V                              ; 0.118 V                              ; 4.57e-10 s                  ; 4.47e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.6e-08 V                   ; 2.42 V             ; -0.0509 V          ; 0.197 V                             ; 0.118 V                             ; 4.57e-10 s                 ; 4.47e-10 s                 ; No                        ; Yes                       ;
+; SEG_Dizaine[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.6e-08 V                    ; 2.42 V              ; -0.0509 V           ; 0.197 V                              ; 0.118 V                              ; 4.57e-10 s                  ; 4.47e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.6e-08 V                   ; 2.42 V             ; -0.0509 V          ; 0.197 V                             ; 0.118 V                             ; 4.57e-10 s                 ; 4.47e-10 s                 ; No                        ; Yes                       ;
+; SEG_Dizaine[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.56e-08 V                   ; 2.43 V              ; -0.0607 V           ; 0.35 V                               ; 0.108 V                              ; 3.1e-10 s                   ; 4.28e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 1.56e-08 V                  ; 2.43 V             ; -0.0607 V          ; 0.35 V                              ; 0.108 V                             ; 3.1e-10 s                  ; 4.28e-10 s                 ; No                        ; No                        ;
+; SEG_Millier[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.56e-08 V                   ; 2.43 V              ; -0.0617 V           ; 0.35 V                               ; 0.107 V                              ; 3.1e-10 s                   ; 4.28e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 1.56e-08 V                  ; 2.43 V             ; -0.0617 V          ; 0.35 V                              ; 0.107 V                             ; 3.1e-10 s                  ; 4.28e-10 s                 ; No                        ; No                        ;
+; SEG_Millier[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.33e-08 V                   ; 2.36 V              ; -0.0253 V           ; 0.132 V                              ; 0.078 V                              ; 4.45e-10 s                  ; 4.26e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.33e-08 V                  ; 2.36 V             ; -0.0253 V          ; 0.132 V                             ; 0.078 V                             ; 4.45e-10 s                 ; 4.26e-10 s                 ; No                        ; Yes                       ;
+; SEG_Millier[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.56e-08 V                   ; 2.43 V              ; -0.0617 V           ; 0.35 V                               ; 0.107 V                              ; 3.1e-10 s                   ; 4.28e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 1.56e-08 V                  ; 2.43 V             ; -0.0617 V          ; 0.35 V                              ; 0.107 V                             ; 3.1e-10 s                  ; 4.28e-10 s                 ; No                        ; No                        ;
+; SEG_Millier[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.33e-08 V                   ; 2.36 V              ; -0.0253 V           ; 0.132 V                              ; 0.078 V                              ; 4.45e-10 s                  ; 4.26e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.33e-08 V                  ; 2.36 V             ; -0.0253 V          ; 0.132 V                             ; 0.078 V                             ; 4.45e-10 s                 ; 4.26e-10 s                 ; No                        ; Yes                       ;
+; SEG_Unite[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.33e-08 V                   ; 2.36 V              ; -0.0253 V           ; 0.132 V                              ; 0.078 V                              ; 4.45e-10 s                  ; 4.26e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.33e-08 V                  ; 2.36 V             ; -0.0253 V          ; 0.132 V                             ; 0.078 V                             ; 4.45e-10 s                 ; 4.26e-10 s                 ; No                        ; Yes                       ;
+; SEG_Unite[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.56e-08 V                   ; 2.43 V              ; -0.0617 V           ; 0.35 V                               ; 0.107 V                              ; 3.1e-10 s                   ; 4.28e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 1.56e-08 V                  ; 2.43 V             ; -0.0617 V          ; 0.35 V                              ; 0.107 V                             ; 3.1e-10 s                  ; 4.28e-10 s                 ; No                        ; No                        ;
+; SEG_Unite[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.56e-08 V                   ; 2.43 V              ; -0.0607 V           ; 0.35 V                               ; 0.108 V                              ; 3.1e-10 s                   ; 4.28e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 1.56e-08 V                  ; 2.43 V             ; -0.0607 V          ; 0.35 V                              ; 0.108 V                             ; 3.1e-10 s                  ; 4.28e-10 s                 ; No                        ; No                        ;
+; SEG_Unite[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.6e-08 V                    ; 2.42 V              ; -0.0509 V           ; 0.197 V                              ; 0.118 V                              ; 4.57e-10 s                  ; 4.47e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.6e-08 V                   ; 2.42 V             ; -0.0509 V          ; 0.197 V                             ; 0.118 V                             ; 4.57e-10 s                 ; 4.47e-10 s                 ; No                        ; Yes                       ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1100mv 100c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin             ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; SEG_Centaine[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.73e-05 V                   ; 2.38 V              ; -0.0297 V           ; 0.21 V                               ; 0.199 V                              ; 4.77e-10 s                  ; 4.97e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.73e-05 V                  ; 2.38 V             ; -0.0297 V          ; 0.21 V                              ; 0.199 V                             ; 4.77e-10 s                 ; 4.97e-10 s                 ; No                        ; Yes                       ;
+; SEG_Centaine[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.73e-05 V                   ; 2.38 V              ; -0.0297 V           ; 0.21 V                               ; 0.199 V                              ; 4.77e-10 s                  ; 4.97e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.73e-05 V                  ; 2.38 V             ; -0.0297 V          ; 0.21 V                              ; 0.199 V                             ; 4.77e-10 s                 ; 4.97e-10 s                 ; No                        ; Yes                       ;
+; SEG_Centaine[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.73e-05 V                   ; 2.38 V              ; -0.0301 V           ; 0.21 V                               ; 0.2 V                                ; 4.78e-10 s                  ; 4.96e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.73e-05 V                  ; 2.38 V             ; -0.0301 V          ; 0.21 V                              ; 0.2 V                               ; 4.78e-10 s                 ; 4.96e-10 s                 ; No                        ; Yes                       ;
+; SEG_Centaine[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.81e-05 V                   ; 2.37 V              ; -0.0242 V           ; 0.257 V                              ; 0.097 V                              ; 5.03e-10 s                  ; 6.18e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.81e-05 V                  ; 2.37 V             ; -0.0242 V          ; 0.257 V                             ; 0.097 V                             ; 5.03e-10 s                 ; 6.18e-10 s                 ; No                        ; Yes                       ;
+; SEG_Dizaine[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.28e-05 V                   ; 2.34 V              ; -0.00773 V          ; 0.214 V                              ; 0.065 V                              ; 5.06e-10 s                  ; 5.4e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 4.28e-05 V                  ; 2.34 V             ; -0.00773 V         ; 0.214 V                             ; 0.065 V                             ; 5.06e-10 s                 ; 5.4e-10 s                  ; Yes                       ; Yes                       ;
+; SEG_Dizaine[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.81e-05 V                   ; 2.37 V              ; -0.0242 V           ; 0.257 V                              ; 0.097 V                              ; 5.03e-10 s                  ; 6.18e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.81e-05 V                  ; 2.37 V             ; -0.0242 V          ; 0.257 V                             ; 0.097 V                             ; 5.03e-10 s                 ; 6.18e-10 s                 ; No                        ; Yes                       ;
+; SEG_Dizaine[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.81e-05 V                   ; 2.37 V              ; -0.0242 V           ; 0.257 V                              ; 0.097 V                              ; 5.03e-10 s                  ; 6.18e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.81e-05 V                  ; 2.37 V             ; -0.0242 V          ; 0.257 V                             ; 0.097 V                             ; 5.03e-10 s                 ; 6.18e-10 s                 ; No                        ; Yes                       ;
+; SEG_Dizaine[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.73e-05 V                   ; 2.38 V              ; -0.0297 V           ; 0.21 V                               ; 0.199 V                              ; 4.77e-10 s                  ; 4.97e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.73e-05 V                  ; 2.38 V             ; -0.0297 V          ; 0.21 V                              ; 0.199 V                             ; 4.77e-10 s                 ; 4.97e-10 s                 ; No                        ; Yes                       ;
+; SEG_Millier[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.73e-05 V                   ; 2.38 V              ; -0.0301 V           ; 0.21 V                               ; 0.2 V                                ; 4.78e-10 s                  ; 4.96e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.73e-05 V                  ; 2.38 V             ; -0.0301 V          ; 0.21 V                              ; 0.2 V                               ; 4.78e-10 s                 ; 4.96e-10 s                 ; No                        ; Yes                       ;
+; SEG_Millier[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.28e-05 V                   ; 2.34 V              ; -0.00773 V          ; 0.214 V                              ; 0.065 V                              ; 5.06e-10 s                  ; 5.4e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 4.28e-05 V                  ; 2.34 V             ; -0.00773 V         ; 0.214 V                             ; 0.065 V                             ; 5.06e-10 s                 ; 5.4e-10 s                  ; Yes                       ; Yes                       ;
+; SEG_Millier[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.73e-05 V                   ; 2.38 V              ; -0.0301 V           ; 0.21 V                               ; 0.2 V                                ; 4.78e-10 s                  ; 4.96e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.73e-05 V                  ; 2.38 V             ; -0.0301 V          ; 0.21 V                              ; 0.2 V                               ; 4.78e-10 s                 ; 4.96e-10 s                 ; No                        ; Yes                       ;
+; SEG_Millier[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.28e-05 V                   ; 2.34 V              ; -0.00773 V          ; 0.214 V                              ; 0.065 V                              ; 5.06e-10 s                  ; 5.4e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 4.28e-05 V                  ; 2.34 V             ; -0.00773 V         ; 0.214 V                             ; 0.065 V                             ; 5.06e-10 s                 ; 5.4e-10 s                  ; Yes                       ; Yes                       ;
+; SEG_Unite[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.28e-05 V                   ; 2.34 V              ; -0.00773 V          ; 0.214 V                              ; 0.065 V                              ; 5.06e-10 s                  ; 5.4e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 4.28e-05 V                  ; 2.34 V             ; -0.00773 V         ; 0.214 V                             ; 0.065 V                             ; 5.06e-10 s                 ; 5.4e-10 s                  ; Yes                       ; Yes                       ;
+; SEG_Unite[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.73e-05 V                   ; 2.38 V              ; -0.0301 V           ; 0.21 V                               ; 0.2 V                                ; 4.78e-10 s                  ; 4.96e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.73e-05 V                  ; 2.38 V             ; -0.0301 V          ; 0.21 V                              ; 0.2 V                               ; 4.78e-10 s                 ; 4.96e-10 s                 ; No                        ; Yes                       ;
+; SEG_Unite[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.73e-05 V                   ; 2.38 V              ; -0.0297 V           ; 0.21 V                               ; 0.199 V                              ; 4.77e-10 s                  ; 4.97e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.73e-05 V                  ; 2.38 V             ; -0.0297 V          ; 0.21 V                              ; 0.199 V                             ; 4.77e-10 s                 ; 4.97e-10 s                 ; No                        ; Yes                       ;
+; SEG_Unite[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.81e-05 V                   ; 2.37 V              ; -0.0242 V           ; 0.257 V                              ; 0.097 V                              ; 5.03e-10 s                  ; 6.18e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.81e-05 V                  ; 2.37 V             ; -0.0242 V          ; 0.257 V                             ; 0.097 V                             ; 5.03e-10 s                 ; 6.18e-10 s                 ; No                        ; Yes                       ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1100mv n40c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin             ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; SEG_Centaine[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 2.38e-07 V                   ; 2.94 V              ; -0.139 V            ; 0.31 V                               ; 0.268 V                              ; 2.65e-10 s                  ; 2.63e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 2.38e-07 V                  ; 2.94 V             ; -0.139 V           ; 0.31 V                              ; 0.268 V                             ; 2.65e-10 s                 ; 2.63e-10 s                 ; No                        ; Yes                       ;
+; SEG_Centaine[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 2.38e-07 V                   ; 2.94 V              ; -0.139 V            ; 0.31 V                               ; 0.268 V                              ; 2.65e-10 s                  ; 2.63e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 2.38e-07 V                  ; 2.94 V             ; -0.139 V           ; 0.31 V                              ; 0.268 V                             ; 2.65e-10 s                 ; 2.63e-10 s                 ; No                        ; Yes                       ;
+; SEG_Centaine[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 2.38e-07 V                   ; 2.94 V              ; -0.135 V            ; 0.31 V                               ; 0.268 V                              ; 2.65e-10 s                  ; 2.64e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 2.38e-07 V                  ; 2.94 V             ; -0.135 V           ; 0.31 V                              ; 0.268 V                             ; 2.65e-10 s                 ; 2.64e-10 s                 ; No                        ; Yes                       ;
+; SEG_Centaine[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 2.45e-07 V                   ; 2.93 V              ; -0.127 V            ; 0.351 V                              ; 0.317 V                              ; 2.74e-10 s                  ; 2.82e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 2.45e-07 V                  ; 2.93 V             ; -0.127 V           ; 0.351 V                             ; 0.317 V                             ; 2.74e-10 s                 ; 2.82e-10 s                 ; No                        ; No                        ;
+; SEG_Dizaine[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 1.99e-07 V                   ; 2.83 V              ; -0.0718 V           ; 0.269 V                              ; 0.234 V                              ; 2.77e-10 s                  ; 2.75e-10 s                  ; Yes                        ; Yes                        ; 2.75 V                      ; 1.99e-07 V                  ; 2.83 V             ; -0.0718 V          ; 0.269 V                             ; 0.234 V                             ; 2.77e-10 s                 ; 2.75e-10 s                 ; Yes                       ; Yes                       ;
+; SEG_Dizaine[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 2.45e-07 V                   ; 2.93 V              ; -0.127 V            ; 0.351 V                              ; 0.317 V                              ; 2.74e-10 s                  ; 2.82e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 2.45e-07 V                  ; 2.93 V             ; -0.127 V           ; 0.351 V                             ; 0.317 V                             ; 2.74e-10 s                 ; 2.82e-10 s                 ; No                        ; No                        ;
+; SEG_Dizaine[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 2.45e-07 V                   ; 2.93 V              ; -0.127 V            ; 0.351 V                              ; 0.317 V                              ; 2.74e-10 s                  ; 2.82e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 2.45e-07 V                  ; 2.93 V             ; -0.127 V           ; 0.351 V                             ; 0.317 V                             ; 2.74e-10 s                 ; 2.82e-10 s                 ; No                        ; No                        ;
+; SEG_Dizaine[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 2.38e-07 V                   ; 2.94 V              ; -0.139 V            ; 0.31 V                               ; 0.268 V                              ; 2.65e-10 s                  ; 2.63e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 2.38e-07 V                  ; 2.94 V             ; -0.139 V           ; 0.31 V                              ; 0.268 V                             ; 2.65e-10 s                 ; 2.63e-10 s                 ; No                        ; Yes                       ;
+; SEG_Millier[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 2.38e-07 V                   ; 2.94 V              ; -0.135 V            ; 0.31 V                               ; 0.268 V                              ; 2.65e-10 s                  ; 2.64e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 2.38e-07 V                  ; 2.94 V             ; -0.135 V           ; 0.31 V                              ; 0.268 V                             ; 2.65e-10 s                 ; 2.64e-10 s                 ; No                        ; Yes                       ;
+; SEG_Millier[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 1.99e-07 V                   ; 2.83 V              ; -0.0718 V           ; 0.269 V                              ; 0.234 V                              ; 2.77e-10 s                  ; 2.75e-10 s                  ; Yes                        ; Yes                        ; 2.75 V                      ; 1.99e-07 V                  ; 2.83 V             ; -0.0718 V          ; 0.269 V                             ; 0.234 V                             ; 2.77e-10 s                 ; 2.75e-10 s                 ; Yes                       ; Yes                       ;
+; SEG_Millier[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 2.38e-07 V                   ; 2.94 V              ; -0.135 V            ; 0.31 V                               ; 0.268 V                              ; 2.65e-10 s                  ; 2.64e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 2.38e-07 V                  ; 2.94 V             ; -0.135 V           ; 0.31 V                              ; 0.268 V                             ; 2.65e-10 s                 ; 2.64e-10 s                 ; No                        ; Yes                       ;
+; SEG_Millier[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 1.99e-07 V                   ; 2.83 V              ; -0.0718 V           ; 0.269 V                              ; 0.234 V                              ; 2.77e-10 s                  ; 2.75e-10 s                  ; Yes                        ; Yes                        ; 2.75 V                      ; 1.99e-07 V                  ; 2.83 V             ; -0.0718 V          ; 0.269 V                             ; 0.234 V                             ; 2.77e-10 s                 ; 2.75e-10 s                 ; Yes                       ; Yes                       ;
+; SEG_Unite[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 1.99e-07 V                   ; 2.83 V              ; -0.0718 V           ; 0.269 V                              ; 0.234 V                              ; 2.77e-10 s                  ; 2.75e-10 s                  ; Yes                        ; Yes                        ; 2.75 V                      ; 1.99e-07 V                  ; 2.83 V             ; -0.0718 V          ; 0.269 V                             ; 0.234 V                             ; 2.77e-10 s                 ; 2.75e-10 s                 ; Yes                       ; Yes                       ;
+; SEG_Unite[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 2.38e-07 V                   ; 2.94 V              ; -0.135 V            ; 0.31 V                               ; 0.268 V                              ; 2.65e-10 s                  ; 2.64e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 2.38e-07 V                  ; 2.94 V             ; -0.135 V           ; 0.31 V                              ; 0.268 V                             ; 2.65e-10 s                 ; 2.64e-10 s                 ; No                        ; Yes                       ;
+; SEG_Unite[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 2.38e-07 V                   ; 2.94 V              ; -0.139 V            ; 0.31 V                               ; 0.268 V                              ; 2.65e-10 s                  ; 2.63e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 2.38e-07 V                  ; 2.94 V             ; -0.139 V           ; 0.31 V                              ; 0.268 V                             ; 2.65e-10 s                 ; 2.63e-10 s                 ; No                        ; Yes                       ;
+; SEG_Unite[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 2.45e-07 V                   ; 2.93 V              ; -0.127 V            ; 0.351 V                              ; 0.317 V                              ; 2.74e-10 s                  ; 2.82e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 2.45e-07 V                  ; 2.93 V             ; -0.127 V           ; 0.351 V                             ; 0.317 V                             ; 2.74e-10 s                 ; 2.82e-10 s                 ; No                        ; No                        ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1100mv 100c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin             ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; SEG_Centaine[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.00041 V                    ; 2.85 V              ; -0.0763 V           ; 0.365 V                              ; 0.161 V                              ; 3.08e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.00041 V                   ; 2.85 V             ; -0.0763 V          ; 0.365 V                             ; 0.161 V                             ; 3.08e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; SEG_Centaine[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.00041 V                    ; 2.85 V              ; -0.0763 V           ; 0.365 V                              ; 0.161 V                              ; 3.08e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.00041 V                   ; 2.85 V             ; -0.0763 V          ; 0.365 V                             ; 0.161 V                             ; 3.08e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; SEG_Centaine[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.00041 V                    ; 2.85 V              ; -0.076 V            ; 0.363 V                              ; 0.16 V                               ; 3.08e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.00041 V                   ; 2.85 V             ; -0.076 V           ; 0.363 V                             ; 0.16 V                              ; 3.08e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; SEG_Centaine[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000419 V                   ; 2.85 V              ; -0.0671 V           ; 0.203 V                              ; 0.19 V                               ; 4.57e-10 s                  ; 4.54e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000419 V                  ; 2.85 V             ; -0.0671 V          ; 0.203 V                             ; 0.19 V                              ; 4.57e-10 s                 ; 4.54e-10 s                 ; No                        ; No                        ;
+; SEG_Dizaine[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000362 V                   ; 2.79 V              ; -0.0303 V           ; 0.139 V                              ; 0.127 V                              ; 4.44e-10 s                  ; 4.38e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000362 V                  ; 2.79 V             ; -0.0303 V          ; 0.139 V                             ; 0.127 V                             ; 4.44e-10 s                 ; 4.38e-10 s                 ; No                        ; Yes                       ;
+; SEG_Dizaine[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000419 V                   ; 2.85 V              ; -0.0671 V           ; 0.203 V                              ; 0.19 V                               ; 4.57e-10 s                  ; 4.54e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000419 V                  ; 2.85 V             ; -0.0671 V          ; 0.203 V                             ; 0.19 V                              ; 4.57e-10 s                 ; 4.54e-10 s                 ; No                        ; No                        ;
+; SEG_Dizaine[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000419 V                   ; 2.85 V              ; -0.0671 V           ; 0.203 V                              ; 0.19 V                               ; 4.57e-10 s                  ; 4.54e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000419 V                  ; 2.85 V             ; -0.0671 V          ; 0.203 V                             ; 0.19 V                              ; 4.57e-10 s                 ; 4.54e-10 s                 ; No                        ; No                        ;
+; SEG_Dizaine[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.00041 V                    ; 2.85 V              ; -0.0763 V           ; 0.365 V                              ; 0.161 V                              ; 3.08e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.00041 V                   ; 2.85 V             ; -0.0763 V          ; 0.365 V                             ; 0.161 V                             ; 3.08e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; SEG_Millier[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.00041 V                    ; 2.85 V              ; -0.076 V            ; 0.363 V                              ; 0.16 V                               ; 3.08e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.00041 V                   ; 2.85 V             ; -0.076 V           ; 0.363 V                             ; 0.16 V                              ; 3.08e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; SEG_Millier[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000362 V                   ; 2.79 V              ; -0.0303 V           ; 0.139 V                              ; 0.127 V                              ; 4.44e-10 s                  ; 4.38e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000362 V                  ; 2.79 V             ; -0.0303 V          ; 0.139 V                             ; 0.127 V                             ; 4.44e-10 s                 ; 4.38e-10 s                 ; No                        ; Yes                       ;
+; SEG_Millier[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.00041 V                    ; 2.85 V              ; -0.076 V            ; 0.363 V                              ; 0.16 V                               ; 3.08e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.00041 V                   ; 2.85 V             ; -0.076 V           ; 0.363 V                             ; 0.16 V                              ; 3.08e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; SEG_Millier[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000362 V                   ; 2.79 V              ; -0.0303 V           ; 0.139 V                              ; 0.127 V                              ; 4.44e-10 s                  ; 4.38e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000362 V                  ; 2.79 V             ; -0.0303 V          ; 0.139 V                             ; 0.127 V                             ; 4.44e-10 s                 ; 4.38e-10 s                 ; No                        ; Yes                       ;
+; SEG_Unite[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000362 V                   ; 2.79 V              ; -0.0303 V           ; 0.139 V                              ; 0.127 V                              ; 4.44e-10 s                  ; 4.38e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000362 V                  ; 2.79 V             ; -0.0303 V          ; 0.139 V                             ; 0.127 V                             ; 4.44e-10 s                 ; 4.38e-10 s                 ; No                        ; Yes                       ;
+; SEG_Unite[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.00041 V                    ; 2.85 V              ; -0.076 V            ; 0.363 V                              ; 0.16 V                               ; 3.08e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.00041 V                   ; 2.85 V             ; -0.076 V           ; 0.363 V                             ; 0.16 V                              ; 3.08e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; SEG_Unite[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.00041 V                    ; 2.85 V              ; -0.0763 V           ; 0.365 V                              ; 0.161 V                              ; 3.08e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.00041 V                   ; 2.85 V             ; -0.0763 V          ; 0.365 V                             ; 0.161 V                             ; 3.08e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; SEG_Unite[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000419 V                   ; 2.85 V              ; -0.0671 V           ; 0.203 V                              ; 0.19 V                               ; 4.57e-10 s                  ; 4.54e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000419 V                  ; 2.85 V             ; -0.0671 V          ; 0.203 V                             ; 0.19 V                              ; 4.57e-10 s                 ; 4.54e-10 s                 ; No                        ; No                        ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                 ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
+; From Clock                               ; To Clock                                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
+; clock_27Mhz                              ; clock_27Mhz                              ; 17953    ; 0        ; 0        ; 0        ;
+; clock_50Mhz                              ; clock_50Mhz                              ; 71812    ; 0        ; 0        ; 0        ;
+; sel[0]                                   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 0        ; 16       ; 0        ; 0        ;
+; clock_27Mhz                              ; sel[0]                                   ; 0        ; 0        ; 8        ; 0        ;
+; Fenetre_Mesure:b2v_inst21|latch_compteur ; sel[0]                                   ; 0        ; 0        ; 1        ; 1        ;
+; sel[0]                                   ; sel[0]                                   ; 0        ; 0        ; 0        ; 416      ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                  ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
+; From Clock                               ; To Clock                                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
+; clock_27Mhz                              ; clock_27Mhz                              ; 17953    ; 0        ; 0        ; 0        ;
+; clock_50Mhz                              ; clock_50Mhz                              ; 71812    ; 0        ; 0        ; 0        ;
+; sel[0]                                   ; Fenetre_Mesure:b2v_inst21|latch_compteur ; 0        ; 16       ; 0        ; 0        ;
+; clock_27Mhz                              ; sel[0]                                   ; 0        ; 0        ; 8        ; 0        ;
+; Fenetre_Mesure:b2v_inst21|latch_compteur ; sel[0]                                   ; 0        ; 0        ; 1        ; 1        ;
+; sel[0]                                   ; sel[0]                                   ; 0        ; 0        ; 0        ; 416      ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; sel[0]     ; sel[0]   ; 0        ; 0        ; 0        ; 29       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; sel[0]     ; sel[0]   ; 0        ; 0        ; 0        ; 29       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 22    ; 22   ;
+; Unconstrained Output Ports      ; 16    ; 16   ;
+; Unconstrained Output Port Paths ; 16    ; 16   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 15.0.2 Build 153 07/15/2015 SJ Web Edition
+    Info: Processing started: Wed Feb 12 18:08:45 2025
+Info: Command: quartus_sta Blinker -c Blinker
+Info: qsta_default_script.tcl version: #11
+Warning (20013): Ignored assignments for entity "altera_avalon_sc_fifo" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_avalon_sc_fifo -entity altera_avalon_sc_fifo -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity altera_avalon_sc_fifo -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_avalon_sc_fifo -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "altera_merlin_master_agent" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_merlin_master_agent -entity altera_merlin_master_agent -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity altera_merlin_master_agent -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_merlin_master_agent -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "altera_merlin_master_translator" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_merlin_master_translator -entity altera_merlin_master_translator -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity altera_merlin_master_translator -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_merlin_master_translator -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "altera_merlin_slave_agent" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_merlin_slave_agent -entity altera_merlin_slave_agent -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity altera_merlin_slave_agent -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_merlin_slave_agent -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "altera_merlin_slave_translator" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_merlin_slave_translator -entity altera_merlin_slave_translator -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity altera_merlin_slave_translator -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_merlin_slave_translator -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "altera_reset_controller" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_reset_controller -entity altera_reset_controller -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity altera_reset_controller -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_reset_controller -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_GENERATED_DEVICE_FAMILY "\{Cyclone V\}" -entity de1_blinker -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TARGETED_DEVICE_FAMILY "Cyclone V" -entity de1_blinker -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_QSYS_MODE SYSTEM -entity de1_blinker -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME Qsys -entity de1_blinker -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name SLD_INFO "QSYS_NAME de1_blinker HAS_SOPCINFO 1 GENERATION_ID 1739302195" -entity de1_blinker -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_Calibration" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_avalon_pio -entity de1_blinker_Calibration -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_Calibration -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_Calibration -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_Centaines" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_avalon_pio -entity de1_blinker_Centaines -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_Centaines -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_Centaines -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_Seven_Seg_1" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_avalon_pio -entity de1_blinker_Seven_Seg_1 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_Seven_Seg_1 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_Seven_Seg_1 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_irq_mapper" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_irq_mapper -entity de1_blinker_irq_mapper -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_irq_mapper -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_irq_mapper -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_jtag_uart_0" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_avalon_jtag_uart -entity de1_blinker_jtag_uart_0 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_jtag_uart_0 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_jtag_uart_0 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_mm_interconnect_0" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_mm_interconnect -entity de1_blinker_mm_interconnect_0 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_mm_interconnect_0 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_mm_interconnect_0 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_mm_interconnect_0_avalon_st_adapter" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_avalon_st_adapter -entity de1_blinker_mm_interconnect_0_avalon_st_adapter -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_mm_interconnect_0_avalon_st_adapter -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_mm_interconnect_0_avalon_st_adapter -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_mm_interconnect_0_avalon_st_adapter_error_adapter_0" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME error_adapter -entity de1_blinker_mm_interconnect_0_avalon_st_adapter_error_adapter_0 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_mm_interconnect_0_avalon_st_adapter_error_adapter_0 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_mm_interconnect_0_avalon_st_adapter_error_adapter_0 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_mm_interconnect_0_cmd_demux" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_merlin_demultiplexer -entity de1_blinker_mm_interconnect_0_cmd_demux -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_mm_interconnect_0_cmd_demux -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_mm_interconnect_0_cmd_demux -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_mm_interconnect_0_cmd_demux_001" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_merlin_demultiplexer -entity de1_blinker_mm_interconnect_0_cmd_demux_001 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_mm_interconnect_0_cmd_demux_001 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_mm_interconnect_0_cmd_demux_001 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_mm_interconnect_0_cmd_mux" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_merlin_multiplexer -entity de1_blinker_mm_interconnect_0_cmd_mux -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_mm_interconnect_0_cmd_mux -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_mm_interconnect_0_cmd_mux -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_mm_interconnect_0_cmd_mux_002" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_merlin_multiplexer -entity de1_blinker_mm_interconnect_0_cmd_mux_002 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_mm_interconnect_0_cmd_mux_002 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_mm_interconnect_0_cmd_mux_002 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_mm_interconnect_0_router" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_merlin_router -entity de1_blinker_mm_interconnect_0_router -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_mm_interconnect_0_router -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_mm_interconnect_0_router -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_mm_interconnect_0_router_001" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_merlin_router -entity de1_blinker_mm_interconnect_0_router_001 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_mm_interconnect_0_router_001 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_mm_interconnect_0_router_001 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_mm_interconnect_0_router_002" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_merlin_router -entity de1_blinker_mm_interconnect_0_router_002 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_mm_interconnect_0_router_002 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_mm_interconnect_0_router_002 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_mm_interconnect_0_router_004" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_merlin_router -entity de1_blinker_mm_interconnect_0_router_004 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_mm_interconnect_0_router_004 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_mm_interconnect_0_router_004 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_mm_interconnect_0_rsp_demux" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_merlin_demultiplexer -entity de1_blinker_mm_interconnect_0_rsp_demux -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_mm_interconnect_0_rsp_demux -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_mm_interconnect_0_rsp_demux -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_mm_interconnect_0_rsp_mux" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_merlin_multiplexer -entity de1_blinker_mm_interconnect_0_rsp_mux -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_mm_interconnect_0_rsp_mux -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_mm_interconnect_0_rsp_mux -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_mm_interconnect_0_rsp_mux_001" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_merlin_multiplexer -entity de1_blinker_mm_interconnect_0_rsp_mux_001 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_mm_interconnect_0_rsp_mux_001 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_mm_interconnect_0_rsp_mux_001 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_nios2_proc" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_nios2_qsys -entity de1_blinker_nios2_proc -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_nios2_proc -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_nios2_proc -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_onchip_memory" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_avalon_onchip_memory2 -entity de1_blinker_onchip_memory -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_onchip_memory -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_onchip_memory -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20013): Ignored assignments for entity "de1_blinker_sysid_1337" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_avalon_sysid_qsys -entity de1_blinker_sysid_1337 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity de1_blinker_sysid_1337 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity de1_blinker_sysid_1337 -qip de1_blinker/synthesis/de1_blinker.qip -library de1_blinker was ignored
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is -40 degrees C
+Info (21077): High junction temperature is 100 degrees C
+Info (332104): Reading SDC File: 'de1_blinker/synthesis/submodules/altera_reset_controller.sdc'
+Info (332104): Reading SDC File: 'de1_blinker/synthesis/submodules/de1_blinker_nios2_proc.sdc'
+Warning (332174): Ignored filter at de1_blinker_nios2_proc.sdc(46): *de1_blinker_nios2_proc:*|de1_blinker_nios2_proc_nios2_oci:the_de1_blinker_nios2_proc_nios2_oci|de1_blinker_nios2_proc_nios2_oci_break:the_de1_blinker_nios2_proc_nios2_oci_break|break_readreg* could not be matched with a keeper
+Warning (332174): Ignored filter at de1_blinker_nios2_proc.sdc(46): *de1_blinker_nios2_proc:*|de1_blinker_nios2_proc_nios2_oci:the_de1_blinker_nios2_proc_nios2_oci|de1_blinker_nios2_proc_jtag_debug_module_wrapper:the_de1_blinker_nios2_proc_jtag_debug_module_wrapper|de1_blinker_nios2_proc_jtag_debug_module_tck:the_de1_blinker_nios2_proc_jtag_debug_module_tck|*sr* could not be matched with a keeper
+Warning (332049): Ignored set_false_path at de1_blinker_nios2_proc.sdc(46): Argument <from> is an empty collection
+    Info (332050): set_false_path -from [get_keepers *$de1_blinker_nios2_proc_oci_break_path|break_readreg*] -to [get_keepers *$de1_blinker_nios2_proc_jtag_sr*]
+Warning (332049): Ignored set_false_path at de1_blinker_nios2_proc.sdc(46): Argument <to> is an empty collection
+Warning (332174): Ignored filter at de1_blinker_nios2_proc.sdc(47): *de1_blinker_nios2_proc:*|de1_blinker_nios2_proc_nios2_oci:the_de1_blinker_nios2_proc_nios2_oci|de1_blinker_nios2_proc_nios2_oci_debug:the_de1_blinker_nios2_proc_nios2_oci_debug|*resetlatch could not be matched with a keeper
+Warning (332174): Ignored filter at de1_blinker_nios2_proc.sdc(47): *de1_blinker_nios2_proc:*|de1_blinker_nios2_proc_nios2_oci:the_de1_blinker_nios2_proc_nios2_oci|de1_blinker_nios2_proc_jtag_debug_module_wrapper:the_de1_blinker_nios2_proc_jtag_debug_module_wrapper|de1_blinker_nios2_proc_jtag_debug_module_tck:the_de1_blinker_nios2_proc_jtag_debug_module_tck|*sr[33] could not be matched with a keeper
+Warning (332049): Ignored set_false_path at de1_blinker_nios2_proc.sdc(47): Argument <from> is an empty collection
+    Info (332050): set_false_path -from [get_keepers *$de1_blinker_nios2_proc_oci_debug_path|*resetlatch]     -to [get_keepers *$de1_blinker_nios2_proc_jtag_sr[33]]
+Warning (332049): Ignored set_false_path at de1_blinker_nios2_proc.sdc(47): Argument <to> is an empty collection
+Warning (332174): Ignored filter at de1_blinker_nios2_proc.sdc(48): *de1_blinker_nios2_proc:*|de1_blinker_nios2_proc_nios2_oci:the_de1_blinker_nios2_proc_nios2_oci|de1_blinker_nios2_proc_nios2_oci_debug:the_de1_blinker_nios2_proc_nios2_oci_debug|monitor_ready could not be matched with a keeper
+Warning (332174): Ignored filter at de1_blinker_nios2_proc.sdc(48): *de1_blinker_nios2_proc:*|de1_blinker_nios2_proc_nios2_oci:the_de1_blinker_nios2_proc_nios2_oci|de1_blinker_nios2_proc_jtag_debug_module_wrapper:the_de1_blinker_nios2_proc_jtag_debug_module_wrapper|de1_blinker_nios2_proc_jtag_debug_module_tck:the_de1_blinker_nios2_proc_jtag_debug_module_tck|*sr[0] could not be matched with a keeper
+Warning (332049): Ignored set_false_path at de1_blinker_nios2_proc.sdc(48): Argument <from> is an empty collection
+    Info (332050): set_false_path -from [get_keepers *$de1_blinker_nios2_proc_oci_debug_path|monitor_ready]  -to [get_keepers *$de1_blinker_nios2_proc_jtag_sr[0]]
+Warning (332049): Ignored set_false_path at de1_blinker_nios2_proc.sdc(48): Argument <to> is an empty collection
+Warning (332174): Ignored filter at de1_blinker_nios2_proc.sdc(49): *de1_blinker_nios2_proc:*|de1_blinker_nios2_proc_nios2_oci:the_de1_blinker_nios2_proc_nios2_oci|de1_blinker_nios2_proc_nios2_oci_debug:the_de1_blinker_nios2_proc_nios2_oci_debug|monitor_error could not be matched with a keeper
+Warning (332174): Ignored filter at de1_blinker_nios2_proc.sdc(49): *de1_blinker_nios2_proc:*|de1_blinker_nios2_proc_nios2_oci:the_de1_blinker_nios2_proc_nios2_oci|de1_blinker_nios2_proc_jtag_debug_module_wrapper:the_de1_blinker_nios2_proc_jtag_debug_module_wrapper|de1_blinker_nios2_proc_jtag_debug_module_tck:the_de1_blinker_nios2_proc_jtag_debug_module_tck|*sr[34] could not be matched with a keeper
+Warning (332049): Ignored set_false_path at de1_blinker_nios2_proc.sdc(49): Argument <from> is an empty collection
+    Info (332050): set_false_path -from [get_keepers *$de1_blinker_nios2_proc_oci_debug_path|monitor_error]  -to [get_keepers *$de1_blinker_nios2_proc_jtag_sr[34]]
+Warning (332049): Ignored set_false_path at de1_blinker_nios2_proc.sdc(49): Argument <to> is an empty collection
+Warning (332174): Ignored filter at de1_blinker_nios2_proc.sdc(50): *de1_blinker_nios2_proc:*|de1_blinker_nios2_proc_nios2_oci:the_de1_blinker_nios2_proc_nios2_oci|de1_blinker_nios2_proc_nios2_ocimem:the_de1_blinker_nios2_proc_nios2_ocimem|*MonDReg* could not be matched with a keeper
+Warning (332049): Ignored set_false_path at de1_blinker_nios2_proc.sdc(50): Argument <from> is an empty collection
+    Info (332050): set_false_path -from [get_keepers *$de1_blinker_nios2_proc_ocimem_path|*MonDReg*] -to [get_keepers *$de1_blinker_nios2_proc_jtag_sr*]
+Warning (332049): Ignored set_false_path at de1_blinker_nios2_proc.sdc(50): Argument <to> is an empty collection
+Warning (332174): Ignored filter at de1_blinker_nios2_proc.sdc(51): *de1_blinker_nios2_proc:*|de1_blinker_nios2_proc_nios2_oci:the_de1_blinker_nios2_proc_nios2_oci|de1_blinker_nios2_proc_jtag_debug_module_wrapper:the_de1_blinker_nios2_proc_jtag_debug_module_wrapper|de1_blinker_nios2_proc_jtag_debug_module_tck:the_de1_blinker_nios2_proc_jtag_debug_module_tck|*sr* could not be matched with a clock or keeper or register or port or pin or cell or partition
+Warning (332174): Ignored filter at de1_blinker_nios2_proc.sdc(51): *de1_blinker_nios2_proc:*|de1_blinker_nios2_proc_nios2_oci:the_de1_blinker_nios2_proc_nios2_oci|de1_blinker_nios2_proc_jtag_debug_module_wrapper:the_de1_blinker_nios2_proc_jtag_debug_module_wrapper|de1_blinker_nios2_proc_jtag_debug_module_sysclk:the_de1_blinker_nios2_proc_jtag_debug_module_sysclk|*jdo* could not be matched with a clock or keeper or register or port or pin or cell or partition
+Warning (332049): Ignored set_false_path at de1_blinker_nios2_proc.sdc(51): Argument <from> is not an object ID
+    Info (332050): set_false_path -from *$de1_blinker_nios2_proc_jtag_sr*    -to *$de1_blinker_nios2_proc_jtag_sysclk_path|*jdo*
+Warning (332049): Ignored set_false_path at de1_blinker_nios2_proc.sdc(51): Argument <to> is not an object ID
+Warning (332174): Ignored filter at de1_blinker_nios2_proc.sdc(52): sld_hub:*|irf_reg* could not be matched with a clock or keeper or register or port or pin or cell or partition
+Warning (332174): Ignored filter at de1_blinker_nios2_proc.sdc(52): *de1_blinker_nios2_proc:*|de1_blinker_nios2_proc_nios2_oci:the_de1_blinker_nios2_proc_nios2_oci|de1_blinker_nios2_proc_jtag_debug_module_wrapper:the_de1_blinker_nios2_proc_jtag_debug_module_wrapper|de1_blinker_nios2_proc_jtag_debug_module_sysclk:the_de1_blinker_nios2_proc_jtag_debug_module_sysclk|ir* could not be matched with a clock or keeper or register or port or pin or cell or partition
+Warning (332049): Ignored set_false_path at de1_blinker_nios2_proc.sdc(52): Argument <from> is not an object ID
+    Info (332050): set_false_path -from sld_hub:*|irf_reg* -to *$de1_blinker_nios2_proc_jtag_sysclk_path|ir*
+Warning (332049): Ignored set_false_path at de1_blinker_nios2_proc.sdc(52): Argument <to> is not an object ID
+Warning (332174): Ignored filter at de1_blinker_nios2_proc.sdc(53): sld_hub:*|sld_shadow_jsm:shadow_jsm|state[1] could not be matched with a clock or keeper or register or port or pin or cell or partition
+Warning (332174): Ignored filter at de1_blinker_nios2_proc.sdc(53): *de1_blinker_nios2_proc:*|de1_blinker_nios2_proc_nios2_oci:the_de1_blinker_nios2_proc_nios2_oci|de1_blinker_nios2_proc_nios2_oci_debug:the_de1_blinker_nios2_proc_nios2_oci_debug|monitor_go could not be matched with a clock or keeper or register or port or pin or cell or partition
+Warning (332049): Ignored set_false_path at de1_blinker_nios2_proc.sdc(53): Argument <from> is not an object ID
+    Info (332050): set_false_path -from sld_hub:*|sld_shadow_jsm:shadow_jsm|state[1] -to *$de1_blinker_nios2_proc_oci_debug_path|monitor_go
+Warning (332049): Ignored set_false_path at de1_blinker_nios2_proc.sdc(53): Argument <to> is not an object ID
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock_27Mhz clock_27Mhz
+    Info (332105): create_clock -period 1.000 -name clock_50Mhz clock_50Mhz
+    Info (332105): create_clock -period 1.000 -name Fenetre_Mesure:b2v_inst21|latch_compteur Fenetre_Mesure:b2v_inst21|latch_compteur
+    Info (332105): create_clock -period 1.000 -name sel[0] sel[0]
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: b2v_inst15|LPM_MUX_component|auto_generated|l2_w0_n0_mux_dataout~1  from: datac  to: combout
+    Info (332098): Cell: b2v_inst15|LPM_MUX_component|auto_generated|l2_w0_n0_mux_dataout~2  from: dataa  to: combout
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1100mV 100C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -9.209
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -9.209            -121.181 sel[0] 
+    Info (332119):    -6.636            -100.705 Fenetre_Mesure:b2v_inst21|latch_compteur 
+    Info (332119):    -5.715            -665.824 clock_50Mhz 
+    Info (332119):    -4.900            -157.472 clock_27Mhz 
+Info (332146): Worst-case hold slack is 0.453
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.453               0.000 clock_27Mhz 
+    Info (332119):     0.453               0.000 clock_50Mhz 
+    Info (332119):     0.534               0.000 sel[0] 
+    Info (332119):     4.634               0.000 Fenetre_Mesure:b2v_inst21|latch_compteur 
+Info (332146): Worst-case recovery slack is -2.069
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.069             -58.732 sel[0] 
+Info (332146): Worst-case removal slack is 0.907
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.907               0.000 sel[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.691
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.691             -67.037 sel[0] 
+    Info (332119):    -0.538            -103.089 clock_50Mhz 
+    Info (332119):    -0.538             -26.668 clock_27Mhz 
+    Info (332119):    -0.538             -12.552 Fenetre_Mesure:b2v_inst21|latch_compteur 
+Info: Analyzing Slow 1100mV -40C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: b2v_inst15|LPM_MUX_component|auto_generated|l2_w0_n0_mux_dataout~1  from: datac  to: combout
+    Info (332098): Cell: b2v_inst15|LPM_MUX_component|auto_generated|l2_w0_n0_mux_dataout~2  from: dataa  to: combout
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -9.141
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -9.141            -119.097 sel[0] 
+    Info (332119):    -6.559             -99.482 Fenetre_Mesure:b2v_inst21|latch_compteur 
+    Info (332119):    -5.962            -687.755 clock_50Mhz 
+    Info (332119):    -5.056            -162.882 clock_27Mhz 
+Info (332146): Worst-case hold slack is 0.358
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.358               0.000 sel[0] 
+    Info (332119):     0.502               0.000 clock_27Mhz 
+    Info (332119):     0.502               0.000 clock_50Mhz 
+    Info (332119):     4.675               0.000 Fenetre_Mesure:b2v_inst21|latch_compteur 
+Info (332146): Worst-case recovery slack is -1.791
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.791             -50.608 sel[0] 
+Info (332146): Worst-case removal slack is 0.771
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.771               0.000 sel[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.790
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.790             -72.682 sel[0] 
+    Info (332119):    -0.538            -111.243 clock_50Mhz 
+    Info (332119):    -0.538             -26.024 clock_27Mhz 
+    Info (332119):    -0.538             -12.486 Fenetre_Mesure:b2v_inst21|latch_compteur 
+Info: Analyzing Fast 1100mV 100C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: b2v_inst15|LPM_MUX_component|auto_generated|l2_w0_n0_mux_dataout~1  from: datac  to: combout
+    Info (332098): Cell: b2v_inst15|LPM_MUX_component|auto_generated|l2_w0_n0_mux_dataout~2  from: dataa  to: combout
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -4.320
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.320             -52.138 sel[0] 
+    Info (332119):    -3.575             -54.916 Fenetre_Mesure:b2v_inst21|latch_compteur 
+    Info (332119):    -2.152            -246.773 clock_50Mhz 
+    Info (332119):    -1.895             -60.004 clock_27Mhz 
+Info (332146): Worst-case hold slack is 0.166
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.166               0.000 sel[0] 
+    Info (332119):     0.184               0.000 clock_27Mhz 
+    Info (332119):     0.184               0.000 clock_50Mhz 
+    Info (332119):     2.588               0.000 Fenetre_Mesure:b2v_inst21|latch_compteur 
+Info (332146): Worst-case recovery slack is -1.106
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.106             -30.399 sel[0] 
+Info (332146): Worst-case removal slack is 0.453
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.453               0.000 sel[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.678
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.678             -33.623 sel[0] 
+    Info (332119):    -0.369             -12.936 clock_27Mhz 
+    Info (332119):    -0.092             -11.728 clock_50Mhz 
+    Info (332119):     0.107               0.000 Fenetre_Mesure:b2v_inst21|latch_compteur 
+Info: Analyzing Fast 1100mV -40C Model
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: b2v_inst15|LPM_MUX_component|auto_generated|l2_w0_n0_mux_dataout~1  from: datac  to: combout
+    Info (332098): Cell: b2v_inst15|LPM_MUX_component|auto_generated|l2_w0_n0_mux_dataout~2  from: dataa  to: combout
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.816
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.816             -42.494 sel[0] 
+    Info (332119):    -3.261             -50.109 Fenetre_Mesure:b2v_inst21|latch_compteur 
+    Info (332119):    -1.842            -208.915 clock_50Mhz 
+    Info (332119):    -1.587             -50.325 clock_27Mhz 
+Info (332146): Worst-case hold slack is 0.106
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.106               0.000 sel[0] 
+    Info (332119):     0.169               0.000 clock_27Mhz 
+    Info (332119):     0.169               0.000 clock_50Mhz 
+    Info (332119):     2.414               0.000 Fenetre_Mesure:b2v_inst21|latch_compteur 
+Info (332146): Worst-case recovery slack is -0.750
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.750             -20.524 sel[0] 
+Info (332146): Worst-case removal slack is 0.340
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.340               0.000 sel[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.601
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.601             -28.107 sel[0] 
+    Info (332119):    -0.325             -10.865 clock_27Mhz 
+    Info (332119):    -0.089             -11.544 clock_50Mhz 
+    Info (332119):     0.125               0.000 Fenetre_Mesure:b2v_inst21|latch_compteur 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 156 warnings
+    Info: Peak virtual memory: 5193 megabytes
+    Info: Processing ended: Wed Feb 12 18:08:53 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:04
+
+

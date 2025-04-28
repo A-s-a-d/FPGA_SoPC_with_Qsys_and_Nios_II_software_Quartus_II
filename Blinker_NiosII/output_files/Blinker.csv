@@ -1,0 +1,116 @@
+# Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus II License Agreement,
+# the Altera MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Altera and sold by Altera or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+
+# Quartus II 64-Bit Version 15.0.2 Build 153 07/15/2015 SJ Web Edition
+# File: C:\FPGA_Proj\Blinker_NiosII\output_files\Blinker.csv
+# Generated on: Mon Feb 10 15:53:44 2025
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Transceiver Analog Settings Protocol,VCCR_GXB/VCCT_GXB Voltage,Transceiver I/O Pin Termination,Transceiver Dedicated Refclk Pin Termination,Transmitter Common Mode Driver Voltage,Transmitter Slew Rate Control,Transmitter Differential Output Voltage,Receiver Buffer Common Mode Voltage,Strict Preservation
+altera_reserved_tck,Input,,,,PIN_AB5,,,,,,,,,,,,,,
+altera_reserved_tdi,Input,,,,PIN_W10,,,,,,,,,,,,,,
+altera_reserved_tdo,Output,,,,PIN_Y9,,,,,,,,,,,,,,
+altera_reserved_tms,Input,,,,PIN_AC7,,,,,,,,,,,,,,
+clock_27Mhz,Input,,,,PIN_W21,,,,,,,,,,,,,,
+clock_50Mhz,Input,PIN_V11,3B,B3B_N0,PIN_V11,2.5 V,,,,,,,,,,,,,
+reset,Input,,,,PIN_AF9,,,,,,,,,,,,,,
+sel[1],Input,PIN_Y24,5B,B5B_N0,PIN_Y24,2.5 V,,,,,,,,,,,,,
+sel[0],Input,PIN_W24,5B,B5B_N0,PIN_W24,2.5 V,,,,,,,,,,,,,
+led_external_connection_export[0],Unknown,PIN_W15,5A,B5A_N0,,,,,,,,,,,,,,,
+led_external_connection_export[1],Unknown,PIN_AA24,5A,B5A_N0,,,,,,,,,,,,,,,
+led_external_connection_export[2],Unknown,PIN_V16,5A,B5A_N0,,,,,,,,,,,,,,,
+led_external_connection_export[7],Unknown,PIN_AA23,5A,B5A_N0,,,,,,,,,,,,,,,
+led_external_connection_export[6],Unknown,PIN_Y16,5A,B5A_N0,,,,,,,,,,,,,,,
+led_external_connection_export[5],Unknown,PIN_AE26,5A,B5A_N0,,,,,,,,,,,,,,,
+led_external_connection_export[4],Unknown,PIN_AF26,5A,B5A_N0,,,,,,,,,,,,,,,
+led_external_connection_export[3],Unknown,PIN_V15,5A,B5A_N0,,,,,,,,,,,,,,,
+seven_seg_1_external_connection_export[0],Unknown,PIN_AH27,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_1_external_connection_export[1],Unknown,PIN_AH26,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_1_external_connection_export[2],Unknown,PIN_AF27,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_1_external_connection_export[3],Unknown,PIN_AD26,5A,B5A_N0,,,,,,,,,,,,,,,
+seven_seg_1_external_connection_export[4],Unknown,PIN_Y15,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_1_external_connection_export[5],Unknown,PIN_AF28,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_1_external_connection_export[6],Unknown,PIN_AC24,5A,B5A_N0,,,,,,,,,,,,,,,
+
+seven_seg_2_external_connection_export[0],Unknown,PIN_AE22,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_2_external_connection_export[1],Unknown,PIN_AF21,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_2_external_connection_export[2],Unknown,PIN_AA20,5A,B5A_N0,,,,,,,,,,,,,,,
+seven_seg_2_external_connection_export[3],Unknown,PIN_AH22,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_2_external_connection_export[4],Unknown,PIN_AF25,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_2_external_connection_export[5],Unknown,PIN_AG21,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_2_external_connection_export[6],Unknown,PIN_AF23,4A,B4A_N0,,,,,,,,,,,,,,,
+
+seven_seg_3_external_connection_export[0],Unknown,PIN_AE19,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_3_external_connection_export[1],Unknown,PIN_AG15,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_3_external_connection_export[2],Unknown,PIN_AE17,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_3_external_connection_export[3],Unknown,PIN_AF20,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_3_external_connection_export[4],Unknown,PIN_AH19,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_3_external_connection_export[5],Unknown,PIN_AE20,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_3_external_connection_export[6],Unknown,PIN_AH18,4A,B4A_N0,,,,,,,,,,,,,,,
+
+seven_seg_4_external_connection_export[0],Unknown,PIN_AG18,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_4_external_connection_export[1],Unknown,PIN_AF18,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_4_external_connection_export[2],Unknown,PIN_AG19,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_4_external_connection_export[3],Unknown,PIN_AF22,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_4_external_connection_export[4],Unknown,PIN_AH21,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_4_external_connection_export[5],Unknown,PIN_AG20,4A,B4A_N0,,,,,,,,,,,,,,,
+seven_seg_4_external_connection_export[6],Unknown,PIN_AH23,4A,B4A_N0,,,,,,,,,,,,,,,
+
+clk_clk,Unknown,,,,,,,,,,,,,,,,,,
+switcher_external_connection_export[1],Unknown,,,,,,,,,,,,,,,,,,
+switcher_external_connection_export[2],Unknown,,,,,,,,,,,,,,,,,,
+switcher_external_connection_export[3],Unknown,,,,,,,,,,,,,,,,,,
+switcher_external_connection_export[0],Unknown,,,,,,,,,,,,,,,,,,
+7seg_1[7],Output,,,,PIN_U10,,,,,,,,,,,,,,
+7seg_1[6],Output,,,,PIN_AG6,,,,,,,,,,,,,,
+7seg_1[5],Output,,,,PIN_AH2,,,,,,,,,,,,,,
+7seg_1[4],Output,,,,PIN_T13,,,,,,,,,,,,,,
+7seg_1[3],Output,,,,PIN_T8,,,,,,,,,,,,,,
+7seg_1[2],Output,,,,PIN_AD5,,,,,,,,,,,,,,
+7seg_1[1],Output,,,,PIN_AE4,,,,,,,,,,,,,,
+7seg_1[0],Output,,,,PIN_AF4,,,,,,,,,,,,,,
+7seg_2[7],Output,,,,PIN_AF8,,,,,,,,,,,,,,
+7seg_2[6],Output,,,,PIN_AD11,,,,,,,,,,,,,,
+7seg_2[5],Output,,,,PIN_T12,,,,,,,,,,,,,,
+7seg_2[4],Output,,,,PIN_U9,,,,,,,,,,,,,,
+7seg_2[3],Output,,,,PIN_AF10,,,,,,,,,,,,,,
+7seg_2[2],Output,,,,PIN_AD10,,,,,,,,,,,,,,
+7seg_2[1],Output,,,,PIN_U11,,,,,,,,,,,,,,
+7seg_2[0],Output,,,,PIN_T11,,,,,,,,,,,,,,
+7seg_3[7],Output,,,,PIN_AF5,,,,,,,,,,,,,,
+7seg_3[6],Output,,,,PIN_W11,,,,,,,,,,,,,,
+7seg_3[5],Output,,,,PIN_W8,,,,,,,,,,,,,,
+7seg_3[4],Output,,,,PIN_AG5,,,,,,,,,,,,,,
+7seg_3[3],Output,,,,PIN_AF7,,,,,,,,,,,,,,
+7seg_3[2],Output,,,,PIN_AE9,,,,,,,,,,,,,,
+7seg_3[1],Output,,,,PIN_AF11,,,,,,,,,,,,,,
+7seg_3[0],Output,,,,PIN_AF6,,,,,,,,,,,,,,
+7seg_4[7],Output,,,,PIN_AA4,,,,,,,,,,,,,,
+7seg_4[6],Output,,,,PIN_AE8,,,,,,,,,,,,,,
+7seg_4[5],Output,,,,PIN_AE7,,,,,,,,,,,,,,
+7seg_4[4],Output,,,,PIN_AH3,,,,,,,,,,,,,,
+7seg_4[3],Output,,,,PIN_AE11,,,,,,,,,,,,,,
+7seg_4[2],Output,,,,PIN_AD4,,,,,,,,,,,,,,
+7seg_4[1],Output,,,,PIN_AD12,,,,,,,,,,,,,,
+7seg_4[0],Output,,,,PIN_AB4,,,,,,,,,,,,,,
+LED[7],Output,,,,PIN_AE6,,,,,,,,,,,,,,
+LED[6],Output,,,,PIN_Y5,,,,,,,,,,,,,,
+LED[5],Output,,,,PIN_V10,,,,,,,,,,,,,,
+LED[4],Output,,,,PIN_AA11,,,,,,,,,,,,,,
+LED[3],Output,,,,PIN_AC4,,,,,,,,,,,,,,
+LED[2],Output,,,,PIN_Y11,,,,,,,,,,,,,,
+LED[1],Output,,,,PIN_Y8,,,,,,,,,,,,,,
+LED[0],Output,,,,PIN_Y4,,,,,,,,,,,,,,

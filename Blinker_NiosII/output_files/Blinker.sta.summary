@@ -1,0 +1,229 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 100C Model Setup 'sel[0]'
+Slack : -9.209
+TNS   : -121.181
+
+Type  : Slow 1100mV 100C Model Setup 'Fenetre_Mesure:b2v_inst21|latch_compteur'
+Slack : -6.636
+TNS   : -100.705
+
+Type  : Slow 1100mV 100C Model Setup 'clock_50Mhz'
+Slack : -5.715
+TNS   : -665.824
+
+Type  : Slow 1100mV 100C Model Setup 'clock_27Mhz'
+Slack : -4.900
+TNS   : -157.472
+
+Type  : Slow 1100mV 100C Model Hold 'clock_27Mhz'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Hold 'clock_50Mhz'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Hold 'sel[0]'
+Slack : 0.534
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Hold 'Fenetre_Mesure:b2v_inst21|latch_compteur'
+Slack : 4.634
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Recovery 'sel[0]'
+Slack : -2.069
+TNS   : -58.732
+
+Type  : Slow 1100mV 100C Model Removal 'sel[0]'
+Slack : 0.907
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'sel[0]'
+Slack : -0.691
+TNS   : -67.037
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'clock_50Mhz'
+Slack : -0.538
+TNS   : -103.089
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'clock_27Mhz'
+Slack : -0.538
+TNS   : -26.668
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'Fenetre_Mesure:b2v_inst21|latch_compteur'
+Slack : -0.538
+TNS   : -12.552
+
+Type  : Slow 1100mV -40C Model Setup 'sel[0]'
+Slack : -9.141
+TNS   : -119.097
+
+Type  : Slow 1100mV -40C Model Setup 'Fenetre_Mesure:b2v_inst21|latch_compteur'
+Slack : -6.559
+TNS   : -99.482
+
+Type  : Slow 1100mV -40C Model Setup 'clock_50Mhz'
+Slack : -5.962
+TNS   : -687.755
+
+Type  : Slow 1100mV -40C Model Setup 'clock_27Mhz'
+Slack : -5.056
+TNS   : -162.882
+
+Type  : Slow 1100mV -40C Model Hold 'sel[0]'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Hold 'clock_27Mhz'
+Slack : 0.502
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Hold 'clock_50Mhz'
+Slack : 0.502
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Hold 'Fenetre_Mesure:b2v_inst21|latch_compteur'
+Slack : 4.675
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Recovery 'sel[0]'
+Slack : -1.791
+TNS   : -50.608
+
+Type  : Slow 1100mV -40C Model Removal 'sel[0]'
+Slack : 0.771
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'sel[0]'
+Slack : -0.790
+TNS   : -72.682
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'clock_50Mhz'
+Slack : -0.538
+TNS   : -111.243
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'clock_27Mhz'
+Slack : -0.538
+TNS   : -26.024
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'Fenetre_Mesure:b2v_inst21|latch_compteur'
+Slack : -0.538
+TNS   : -12.486
+
+Type  : Fast 1100mV 100C Model Setup 'sel[0]'
+Slack : -4.320
+TNS   : -52.138
+
+Type  : Fast 1100mV 100C Model Setup 'Fenetre_Mesure:b2v_inst21|latch_compteur'
+Slack : -3.575
+TNS   : -54.916
+
+Type  : Fast 1100mV 100C Model Setup 'clock_50Mhz'
+Slack : -2.152
+TNS   : -246.773
+
+Type  : Fast 1100mV 100C Model Setup 'clock_27Mhz'
+Slack : -1.895
+TNS   : -60.004
+
+Type  : Fast 1100mV 100C Model Hold 'sel[0]'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Hold 'clock_27Mhz'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Hold 'clock_50Mhz'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Hold 'Fenetre_Mesure:b2v_inst21|latch_compteur'
+Slack : 2.588
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Recovery 'sel[0]'
+Slack : -1.106
+TNS   : -30.399
+
+Type  : Fast 1100mV 100C Model Removal 'sel[0]'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'sel[0]'
+Slack : -0.678
+TNS   : -33.623
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'clock_27Mhz'
+Slack : -0.369
+TNS   : -12.936
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'clock_50Mhz'
+Slack : -0.092
+TNS   : -11.728
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'Fenetre_Mesure:b2v_inst21|latch_compteur'
+Slack : 0.107
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Setup 'sel[0]'
+Slack : -3.816
+TNS   : -42.494
+
+Type  : Fast 1100mV -40C Model Setup 'Fenetre_Mesure:b2v_inst21|latch_compteur'
+Slack : -3.261
+TNS   : -50.109
+
+Type  : Fast 1100mV -40C Model Setup 'clock_50Mhz'
+Slack : -1.842
+TNS   : -208.915
+
+Type  : Fast 1100mV -40C Model Setup 'clock_27Mhz'
+Slack : -1.587
+TNS   : -50.325
+
+Type  : Fast 1100mV -40C Model Hold 'sel[0]'
+Slack : 0.106
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Hold 'clock_27Mhz'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Hold 'clock_50Mhz'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Hold 'Fenetre_Mesure:b2v_inst21|latch_compteur'
+Slack : 2.414
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Recovery 'sel[0]'
+Slack : -0.750
+TNS   : -20.524
+
+Type  : Fast 1100mV -40C Model Removal 'sel[0]'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'sel[0]'
+Slack : -0.601
+TNS   : -28.107
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'clock_27Mhz'
+Slack : -0.325
+TNS   : -10.865
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'clock_50Mhz'
+Slack : -0.089
+TNS   : -11.544
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'Fenetre_Mesure:b2v_inst21|latch_compteur'
+Slack : 0.125
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,31 @@
+# do Blinker.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 18:35:25 on Feb 12,2025
+# vlog -work work Blinker.vo 
+# -- Compiling module TPfinal2
+# 
+# Top level modules:
+# 	TPfinal2
+# End time: 18:35:25 on Feb 12,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 18:35:26 on Feb 12,2025
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module TPfinal2_vlg_vec_tst
+# 
+# Top level modules:
+# 	TPfinal2_vlg_vec_tst
+# End time: 18:35:26 on Feb 12,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -do "Blinker.do" 
+# Start time: 18:35:26 on Feb 12,2025
+# Loading work.TPfinal2_vlg_vec_tst
+# Loading work.TPfinal2
+# Loading altera_ver.dffeas
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Note: $finish    : Waveform.vwf.vt(57)
+#    Time: 1 us  Iteration: 0  Instance: /TPfinal2_vlg_vec_tst
+# End time: 18:35:26 on Feb 12,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

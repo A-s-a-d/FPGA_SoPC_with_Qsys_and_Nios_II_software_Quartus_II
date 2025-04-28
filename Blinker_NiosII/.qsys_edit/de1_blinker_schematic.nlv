@@ -1,0 +1,38 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst de1_blinker.clk_main -pg 1 -lvl 2 -y 170
+preplace inst de1_blinker.Milliers -pg 1 -lvl 3 -y 370
+preplace inst de1_blinker.nios2_proc -pg 1 -lvl 1 -y 60
+preplace inst de1_blinker.jtag_uart_0 -pg 1 -lvl 3 -y 140
+preplace inst de1_blinker.Centaines -pg 1 -lvl 3 -y 1430
+preplace inst de1_blinker.Unites -pg 1 -lvl 3 -y 1100
+preplace inst de1_blinker.Calibration -pg 1 -lvl 3 -y 30
+preplace inst de1_blinker.sysid_1337 -pg 1 -lvl 3 -y 570
+preplace inst de1_blinker.switcher -pg 1 -lvl 3 -y 1320
+preplace inst de1_blinker.led -pg 1 -lvl 3 -y 1210
+preplace inst de1_blinker -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst de1_blinker.Seven_Seg_1 -pg 1 -lvl 3 -y 660
+preplace inst de1_blinker.Seven_Seg_2 -pg 1 -lvl 3 -y 770
+preplace inst de1_blinker.Seven_Seg_3 -pg 1 -lvl 3 -y 880
+preplace inst de1_blinker.onchip_memory -pg 1 -lvl 3 -y 480
+preplace inst de1_blinker.Seven_Seg_4 -pg 1 -lvl 3 -y 990
+preplace inst de1_blinker.Dizaines -pg 1 -lvl 3 -y 260
+preplace netloc EXPORT<net_container>de1_blinker</net_container>(SLAVE)de1_blinker.led_external_connection,(SLAVE)led.external_connection) 1 0 3 NJ 1240 NJ 1240 NJ
+preplace netloc EXPORT<net_container>de1_blinker</net_container>(SLAVE)clk_main.clk_in,(SLAVE)de1_blinker.clk) 1 0 2 NJ 270 NJ
+preplace netloc EXPORT<net_container>de1_blinker</net_container>(SLAVE)de1_blinker.seven_seg_4_external_connection,(SLAVE)Seven_Seg_4.external_connection) 1 0 3 NJ 1020 NJ 1020 NJ
+preplace netloc EXPORT<net_container>de1_blinker</net_container>(SLAVE)de1_blinker.centaines_external_connection,(SLAVE)Centaines.external_connection) 1 0 3 NJ 1460 NJ 1460 NJ
+preplace netloc POINT_TO_POINT<net_container>de1_blinker</net_container>(SLAVE)jtag_uart_0.irq,(MASTER)nios2_proc.d_irq) 1 1 2 NJ 260 NJ
+preplace netloc EXPORT<net_container>de1_blinker</net_container>(SLAVE)Calibration.external_connection,(SLAVE)de1_blinker.calibration_external_connection) 1 0 3 NJ 210 NJ 60 NJ
+preplace netloc FAN_OUT<net_container>de1_blinker</net_container>(SLAVE)led.reset,(SLAVE)onchip_memory.reset1,(SLAVE)Calibration.reset,(SLAVE)Dizaines.reset,(SLAVE)Centaines.reset,(SLAVE)Unites.reset,(SLAVE)Seven_Seg_1.reset,(SLAVE)switcher.reset,(SLAVE)Seven_Seg_2.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)Seven_Seg_4.reset,(SLAVE)nios2_proc.reset_n,(SLAVE)Milliers.reset,(MASTER)clk_main.clk_reset,(SLAVE)Seven_Seg_3.reset,(SLAVE)sysid_1337.reset) 1 0 3 260 230 NJ 140 820
+preplace netloc FAN_OUT<net_container>de1_blinker</net_container>(SLAVE)nios2_proc.clk,(SLAVE)led.clk,(SLAVE)Centaines.clk,(SLAVE)sysid_1337.clk,(SLAVE)Seven_Seg_1.clk,(SLAVE)Calibration.clk,(SLAVE)Seven_Seg_2.clk,(SLAVE)Seven_Seg_3.clk,(SLAVE)Unites.clk,(SLAVE)switcher.clk,(SLAVE)Seven_Seg_4.clk,(MASTER)clk_main.clk,(SLAVE)Milliers.clk,(SLAVE)Dizaines.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)onchip_memory.clk1) 1 0 3 220 250 NJ 160 860
+preplace netloc EXPORT<net_container>de1_blinker</net_container>(SLAVE)Seven_Seg_3.external_connection,(SLAVE)de1_blinker.seven_seg_3_external_connection) 1 0 3 NJ 910 NJ 910 NJ
+preplace netloc POINT_TO_POINT<net_container>de1_blinker</net_container>(MASTER)nios2_proc.jtag_debug_module_reset,(SLAVE)clk_main.clk_in_reset) 1 1 1 550
+preplace netloc EXPORT<net_container>de1_blinker</net_container>(SLAVE)de1_blinker.seven_seg_2_external_connection,(SLAVE)Seven_Seg_2.external_connection) 1 0 3 NJ 800 NJ 800 NJ
+preplace netloc EXPORT<net_container>de1_blinker</net_container>(SLAVE)switcher.external_connection,(SLAVE)de1_blinker.switcher_external_connection) 1 0 3 NJ 1350 NJ 1350 NJ
+preplace netloc EXPORT<net_container>de1_blinker</net_container>(SLAVE)Milliers.external_connection,(SLAVE)de1_blinker.milliers_external_connection) 1 0 3 NJ 400 NJ 400 NJ
+preplace netloc INTERCONNECT<net_container>de1_blinker</net_container>(SLAVE)Seven_Seg_2.s1,(SLAVE)Unites.s1,(SLAVE)Dizaines.s1,(MASTER)nios2_proc.instruction_master,(SLAVE)onchip_memory.s1,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)sysid_1337.control_slave,(SLAVE)Seven_Seg_1.s1,(SLAVE)Centaines.s1,(SLAVE)switcher.s1,(SLAVE)Seven_Seg_4.s1,(SLAVE)Seven_Seg_3.s1,(MASTER)nios2_proc.data_master,(SLAVE)nios2_proc.jtag_debug_module,(SLAVE)Milliers.s1,(SLAVE)led.s1,(SLAVE)Calibration.s1) 1 0 3 240 190 510 40 840
+preplace netloc EXPORT<net_container>de1_blinker</net_container>(SLAVE)de1_blinker.unites_external_connection,(SLAVE)Unites.external_connection) 1 0 3 NJ 1130 NJ 1130 NJ
+preplace netloc EXPORT<net_container>de1_blinker</net_container>(SLAVE)Seven_Seg_1.external_connection,(SLAVE)de1_blinker.seven_seg_1_external_connection) 1 0 3 NJ 690 NJ 690 NJ
+preplace netloc EXPORT<net_container>de1_blinker</net_container>(SLAVE)de1_blinker.dizaines_external_connection,(SLAVE)Dizaines.external_connection) 1 0 3 NJ 290 NJ 290 NJ
+levelinfo -pg 1 0 190 1090
+levelinfo -hier de1_blinker 200 290 660 930 1080

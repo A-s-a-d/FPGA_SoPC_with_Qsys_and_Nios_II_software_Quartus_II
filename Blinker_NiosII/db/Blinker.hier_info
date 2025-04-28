@@ -1,0 +1,418 @@
+|TPfinal2
+reset => fenetre_mesure:b2v_inst21.reset
+reset => latch_data:b2v_inst24.reset
+reset => latch_data:b2v_inst25.reset
+reset => latch_data:b2v_inst26.reset
+reset => latch_data:b2v_inst27.reset
+clock_50Mhz => diviseur:b2v_inst17.clk50
+clock_50Mhz => diviseur:b2v_inst18.clk50
+clock_50Mhz => diviseur:b2v_inst19.clk50
+clock_50Mhz => diviseur:b2v_inst22.clk50
+clock_27Mhz => diviseur:b2v_inst20.clk50
+sel[0] => lpm_mux1:b2v_inst15.sel[0]
+sel[1] => lpm_mux1:b2v_inst15.sel[1]
+SEG_Centaine[0] << latch_data:b2v_inst26.sortie[0]
+SEG_Centaine[1] << latch_data:b2v_inst26.sortie[1]
+SEG_Centaine[2] << latch_data:b2v_inst26.sortie[2]
+SEG_Centaine[3] << latch_data:b2v_inst26.sortie[3]
+SEG_Dizaine[0] << latch_data:b2v_inst25.sortie[0]
+SEG_Dizaine[1] << latch_data:b2v_inst25.sortie[1]
+SEG_Dizaine[2] << latch_data:b2v_inst25.sortie[2]
+SEG_Dizaine[3] << latch_data:b2v_inst25.sortie[3]
+SEG_Millier[0] << latch_data:b2v_inst27.sortie[0]
+SEG_Millier[1] << latch_data:b2v_inst27.sortie[1]
+SEG_Millier[2] << latch_data:b2v_inst27.sortie[2]
+SEG_Millier[3] << latch_data:b2v_inst27.sortie[3]
+SEG_Unite[0] << latch_data:b2v_inst24.sortie[0]
+SEG_Unite[1] << latch_data:b2v_inst24.sortie[1]
+SEG_Unite[2] << latch_data:b2v_inst24.sortie[2]
+SEG_Unite[3] << latch_data:b2v_inst24.sortie[3]
+
+
+|TPfinal2|compteurN:b2v_inst1
+clk => count_m[0].CLK
+clk => count_m[1].CLK
+clk => count_m[2].CLK
+clk => count_m[3].CLK
+clk => count_c[0].CLK
+clk => count_c[1].CLK
+clk => count_c[2].CLK
+clk => count_c[3].CLK
+clk => count_d[0].CLK
+clk => count_d[1].CLK
+clk => count_d[2].CLK
+clk => count_d[3].CLK
+clk => count_u[0].CLK
+clk => count_u[1].CLK
+clk => count_u[2].CLK
+clk => count_u[3].CLK
+reset => count_m[0].ACLR
+reset => count_m[1].ACLR
+reset => count_m[2].ACLR
+reset => count_m[3].ACLR
+reset => count_c[0].ACLR
+reset => count_c[1].ACLR
+reset => count_c[2].ACLR
+reset => count_c[3].ACLR
+reset => count_d[0].ACLR
+reset => count_d[1].ACLR
+reset => count_d[2].ACLR
+reset => count_d[3].ACLR
+reset => count_u[0].ACLR
+reset => count_u[1].ACLR
+reset => count_u[2].ACLR
+reset => count_u[3].ACLR
+enable => count_m[2].ENA
+enable => count_m[1].ENA
+enable => count_m[0].ENA
+enable => count_m[3].ENA
+enable => count_c[0].ENA
+enable => count_c[1].ENA
+enable => count_c[2].ENA
+enable => count_c[3].ENA
+enable => count_d[0].ENA
+enable => count_d[1].ENA
+enable => count_d[2].ENA
+enable => count_d[3].ENA
+enable => count_u[0].ENA
+enable => count_u[1].ENA
+enable => count_u[2].ENA
+enable => count_u[3].ENA
+unite[0] <= count_u[0].DB_MAX_OUTPUT_PORT_TYPE
+unite[1] <= count_u[1].DB_MAX_OUTPUT_PORT_TYPE
+unite[2] <= count_u[2].DB_MAX_OUTPUT_PORT_TYPE
+unite[3] <= count_u[3].DB_MAX_OUTPUT_PORT_TYPE
+dizaine[0] <= count_d[0].DB_MAX_OUTPUT_PORT_TYPE
+dizaine[1] <= count_d[1].DB_MAX_OUTPUT_PORT_TYPE
+dizaine[2] <= count_d[2].DB_MAX_OUTPUT_PORT_TYPE
+dizaine[3] <= count_d[3].DB_MAX_OUTPUT_PORT_TYPE
+centaine[0] <= count_c[0].DB_MAX_OUTPUT_PORT_TYPE
+centaine[1] <= count_c[1].DB_MAX_OUTPUT_PORT_TYPE
+centaine[2] <= count_c[2].DB_MAX_OUTPUT_PORT_TYPE
+centaine[3] <= count_c[3].DB_MAX_OUTPUT_PORT_TYPE
+millier[0] <= count_m[0].DB_MAX_OUTPUT_PORT_TYPE
+millier[1] <= count_m[1].DB_MAX_OUTPUT_PORT_TYPE
+millier[2] <= count_m[2].DB_MAX_OUTPUT_PORT_TYPE
+millier[3] <= count_m[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TPfinal2|lpm_mux1:b2v_inst15
+data0 => LPM_MUX:LPM_MUX_component.DATA[0][0]
+data1 => LPM_MUX:LPM_MUX_component.DATA[1][0]
+data2 => LPM_MUX:LPM_MUX_component.DATA[2][0]
+data3 => LPM_MUX:LPM_MUX_component.DATA[3][0]
+sel[0] => LPM_MUX:LPM_MUX_component.SEL[0]
+sel[1] => LPM_MUX:LPM_MUX_component.SEL[1]
+result <= LPM_MUX:LPM_MUX_component.RESULT[0]
+
+
+|TPfinal2|lpm_mux1:b2v_inst15|LPM_MUX:LPM_MUX_component
+data[0][0] => mux_70e:auto_generated.data[0]
+data[1][0] => mux_70e:auto_generated.data[1]
+data[2][0] => mux_70e:auto_generated.data[2]
+data[3][0] => mux_70e:auto_generated.data[3]
+sel[0] => mux_70e:auto_generated.sel[0]
+sel[1] => mux_70e:auto_generated.sel[1]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_70e:auto_generated.result[0]
+
+
+|TPfinal2|lpm_mux1:b2v_inst15|LPM_MUX:LPM_MUX_component|mux_70e:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+data[2] => l1_w0_n1_mux_dataout.IN1
+data[3] => l1_w0_n1_mux_dataout.IN1
+result[0] <= l2_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w0_n1_mux_dataout.IN0
+sel[0] => _.IN0
+sel[1] => l2_w0_n0_mux_dataout.IN0
+sel[1] => _.IN0
+
+
+|TPfinal2|diviseur:b2v_inst17
+clk50 => temp.CLK
+clk50 => n[0].CLK
+clk50 => n[1].CLK
+clk50 => n[2].CLK
+clk50 => n[3].CLK
+clk50 => n[4].CLK
+clk50 => n[5].CLK
+clk50 => n[6].CLK
+clk50 => n[7].CLK
+clk50 => n[8].CLK
+clk50 => n[9].CLK
+clk50 => n[10].CLK
+clk50 => n[11].CLK
+clk50 => n[12].CLK
+clk50 => n[13].CLK
+clk50 => n[14].CLK
+clk50 => n[15].CLK
+clk50 => n[16].CLK
+clk50 => n[17].CLK
+clk50 => n[18].CLK
+clk50 => n[19].CLK
+clk50 => n[20].CLK
+clk50 => n[21].CLK
+clk50 => n[22].CLK
+clk50 => n[23].CLK
+clk50 => n[24].CLK
+clk50 => n[25].CLK
+clk50 => n[26].CLK
+clk50 => n[27].CLK
+clk50 => n[28].CLK
+clk50 => n[29].CLK
+clk50 => n[30].CLK
+clk50 => n[31].CLK
+clk1out <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TPfinal2|diviseur:b2v_inst18
+clk50 => temp.CLK
+clk50 => n[0].CLK
+clk50 => n[1].CLK
+clk50 => n[2].CLK
+clk50 => n[3].CLK
+clk50 => n[4].CLK
+clk50 => n[5].CLK
+clk50 => n[6].CLK
+clk50 => n[7].CLK
+clk50 => n[8].CLK
+clk50 => n[9].CLK
+clk50 => n[10].CLK
+clk50 => n[11].CLK
+clk50 => n[12].CLK
+clk50 => n[13].CLK
+clk50 => n[14].CLK
+clk50 => n[15].CLK
+clk50 => n[16].CLK
+clk50 => n[17].CLK
+clk50 => n[18].CLK
+clk50 => n[19].CLK
+clk50 => n[20].CLK
+clk50 => n[21].CLK
+clk50 => n[22].CLK
+clk50 => n[23].CLK
+clk50 => n[24].CLK
+clk50 => n[25].CLK
+clk50 => n[26].CLK
+clk50 => n[27].CLK
+clk50 => n[28].CLK
+clk50 => n[29].CLK
+clk50 => n[30].CLK
+clk50 => n[31].CLK
+clk1out <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TPfinal2|diviseur:b2v_inst19
+clk50 => temp.CLK
+clk50 => n[0].CLK
+clk50 => n[1].CLK
+clk50 => n[2].CLK
+clk50 => n[3].CLK
+clk50 => n[4].CLK
+clk50 => n[5].CLK
+clk50 => n[6].CLK
+clk50 => n[7].CLK
+clk50 => n[8].CLK
+clk50 => n[9].CLK
+clk50 => n[10].CLK
+clk50 => n[11].CLK
+clk50 => n[12].CLK
+clk50 => n[13].CLK
+clk50 => n[14].CLK
+clk50 => n[15].CLK
+clk50 => n[16].CLK
+clk50 => n[17].CLK
+clk50 => n[18].CLK
+clk50 => n[19].CLK
+clk50 => n[20].CLK
+clk50 => n[21].CLK
+clk50 => n[22].CLK
+clk50 => n[23].CLK
+clk50 => n[24].CLK
+clk50 => n[25].CLK
+clk50 => n[26].CLK
+clk50 => n[27].CLK
+clk50 => n[28].CLK
+clk50 => n[29].CLK
+clk50 => n[30].CLK
+clk50 => n[31].CLK
+clk1out <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TPfinal2|diviseur:b2v_inst20
+clk50 => temp.CLK
+clk50 => n[0].CLK
+clk50 => n[1].CLK
+clk50 => n[2].CLK
+clk50 => n[3].CLK
+clk50 => n[4].CLK
+clk50 => n[5].CLK
+clk50 => n[6].CLK
+clk50 => n[7].CLK
+clk50 => n[8].CLK
+clk50 => n[9].CLK
+clk50 => n[10].CLK
+clk50 => n[11].CLK
+clk50 => n[12].CLK
+clk50 => n[13].CLK
+clk50 => n[14].CLK
+clk50 => n[15].CLK
+clk50 => n[16].CLK
+clk50 => n[17].CLK
+clk50 => n[18].CLK
+clk50 => n[19].CLK
+clk50 => n[20].CLK
+clk50 => n[21].CLK
+clk50 => n[22].CLK
+clk50 => n[23].CLK
+clk50 => n[24].CLK
+clk50 => n[25].CLK
+clk50 => n[26].CLK
+clk50 => n[27].CLK
+clk50 => n[28].CLK
+clk50 => n[29].CLK
+clk50 => n[30].CLK
+clk50 => n[31].CLK
+clk1out <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TPfinal2|Fenetre_Mesure:b2v_inst21
+clk => clk_compteur.DATAB
+clk => latch_compteur~reg0.CLK
+clk => enable_temp.CLK
+clk => enable_compteur~reg0.CLK
+clk => count.CLK
+clk => temp.CLK
+clk => reset_compteur~reg0.CLK
+measure => process_0.IN1
+measure => process_0.IN1
+reset => enable_temp.ACLR
+reset => enable_compteur~reg0.ACLR
+reset => count.ACLR
+reset => temp.ACLR
+reset => reset_compteur~reg0.PRESET
+reset => latch_compteur~reg0.ENA
+latch_compteur <= latch_compteur~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_compteur <= clk_compteur.DB_MAX_OUTPUT_PORT_TYPE
+reset_compteur <= reset_compteur~reg0.DB_MAX_OUTPUT_PORT_TYPE
+enable_compteur <= enable_compteur~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TPfinal2|diviseur:b2v_inst22
+clk50 => temp.CLK
+clk50 => n[0].CLK
+clk50 => n[1].CLK
+clk50 => n[2].CLK
+clk50 => n[3].CLK
+clk50 => n[4].CLK
+clk50 => n[5].CLK
+clk50 => n[6].CLK
+clk50 => n[7].CLK
+clk50 => n[8].CLK
+clk50 => n[9].CLK
+clk50 => n[10].CLK
+clk50 => n[11].CLK
+clk50 => n[12].CLK
+clk50 => n[13].CLK
+clk50 => n[14].CLK
+clk50 => n[15].CLK
+clk50 => n[16].CLK
+clk50 => n[17].CLK
+clk50 => n[18].CLK
+clk50 => n[19].CLK
+clk50 => n[20].CLK
+clk50 => n[21].CLK
+clk50 => n[22].CLK
+clk50 => n[23].CLK
+clk50 => n[24].CLK
+clk50 => n[25].CLK
+clk50 => n[26].CLK
+clk50 => n[27].CLK
+clk50 => n[28].CLK
+clk50 => n[29].CLK
+clk50 => n[30].CLK
+clk50 => n[31].CLK
+clk1out <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TPfinal2|latch_data:b2v_inst24
+entree[0] => sortie[0]~reg0.DATAIN
+entree[1] => sortie[1]~reg0.DATAIN
+entree[2] => sortie[2]~reg0.DATAIN
+entree[3] => sortie[3]~reg0.DATAIN
+latch => sortie[0]~reg0.CLK
+latch => sortie[1]~reg0.CLK
+latch => sortie[2]~reg0.CLK
+latch => sortie[3]~reg0.CLK
+reset => sortie[0]~reg0.ACLR
+reset => sortie[1]~reg0.ACLR
+reset => sortie[2]~reg0.ACLR
+reset => sortie[3]~reg0.ACLR
+sortie[0] <= sortie[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sortie[1] <= sortie[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sortie[2] <= sortie[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sortie[3] <= sortie[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TPfinal2|latch_data:b2v_inst25
+entree[0] => sortie[0]~reg0.DATAIN
+entree[1] => sortie[1]~reg0.DATAIN
+entree[2] => sortie[2]~reg0.DATAIN
+entree[3] => sortie[3]~reg0.DATAIN
+latch => sortie[0]~reg0.CLK
+latch => sortie[1]~reg0.CLK
+latch => sortie[2]~reg0.CLK
+latch => sortie[3]~reg0.CLK
+reset => sortie[0]~reg0.ACLR
+reset => sortie[1]~reg0.ACLR
+reset => sortie[2]~reg0.ACLR
+reset => sortie[3]~reg0.ACLR
+sortie[0] <= sortie[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sortie[1] <= sortie[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sortie[2] <= sortie[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sortie[3] <= sortie[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TPfinal2|latch_data:b2v_inst26
+entree[0] => sortie[0]~reg0.DATAIN
+entree[1] => sortie[1]~reg0.DATAIN
+entree[2] => sortie[2]~reg0.DATAIN
+entree[3] => sortie[3]~reg0.DATAIN
+latch => sortie[0]~reg0.CLK
+latch => sortie[1]~reg0.CLK
+latch => sortie[2]~reg0.CLK
+latch => sortie[3]~reg0.CLK
+reset => sortie[0]~reg0.ACLR
+reset => sortie[1]~reg0.ACLR
+reset => sortie[2]~reg0.ACLR
+reset => sortie[3]~reg0.ACLR
+sortie[0] <= sortie[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sortie[1] <= sortie[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sortie[2] <= sortie[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sortie[3] <= sortie[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TPfinal2|latch_data:b2v_inst27
+entree[0] => sortie[0]~reg0.DATAIN
+entree[1] => sortie[1]~reg0.DATAIN
+entree[2] => sortie[2]~reg0.DATAIN
+entree[3] => sortie[3]~reg0.DATAIN
+latch => sortie[0]~reg0.CLK
+latch => sortie[1]~reg0.CLK
+latch => sortie[2]~reg0.CLK
+latch => sortie[3]~reg0.CLK
+reset => sortie[0]~reg0.ACLR
+reset => sortie[1]~reg0.ACLR
+reset => sortie[2]~reg0.ACLR
+reset => sortie[3]~reg0.ACLR
+sortie[0] <= sortie[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sortie[1] <= sortie[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sortie[2] <= sortie[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sortie[3] <= sortie[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
